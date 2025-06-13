@@ -3,7 +3,7 @@ import { ContactForm } from "./components/ContactForm";
 import { ContactLinks } from "./components/ContactLinks";
 import { EducationCard } from "./components/EducationCard";
 import { ExperienceCard } from "./components/ExperienceCard";
-import { Header } from "./components/Header";
+import Header  from "./components/Header";
 import { ProjectCard } from "./components/ProjectCard";
 import { Skills } from "./components/Skills";
 import { education } from "./data/education";

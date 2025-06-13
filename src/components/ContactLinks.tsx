@@ -5,6 +5,7 @@ import {
   Github,
   Instagram,
   Twitter,
+  File,
 } from "lucide-react";
 import { JSX } from "react/jsx-dev-runtime";
 
@@ -25,6 +26,11 @@ export function ContactLinks() {
       href: "tel:+91 9949887000",
       icon: <Phone className="w-4 h-4" />,
       label: "Phone",
+    },
+    {
+      href: "https://www.instagram.com/atomic_coding/",
+      icon: <File className="w-4 h-4" />,
+      label: "Resume",
     },
     {
       href: "https://linkedin.com/in/sridinesh07",
