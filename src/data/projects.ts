@@ -6,7 +6,7 @@ export const projects = [
     language: "NextJS, Reactjs, PostgreSQl, Tailwind CSS, Stripe",
     demoLink: "https://sparkcv.vercel.app/",
     codeLink: "https://github.com/Sri-dinesh/resume-builder-ai",
-    imageUrl: "/src/assets/ai resume builder.png",
+    imageUrl: "/assets/ai resume builder.png",
   },
   {
     title: "AI Drawing Calculator",
@@ -15,7 +15,7 @@ export const projects = [
     language: "Reactjs, Python, Gemini API, Tailwind CSS",
     demoLink: "https://ai-smartsketch.onrender.com/",
     codeLink: "https://github.com/Sri-dinesh/AI-SmartSketch",
-    imageUrl: "/src/assets/calculator.png",
+    imageUrl: "/assets/calculator.png",
   },
   {
     title: "Nexus Flow(Real Estate)",
@@ -24,7 +24,7 @@ export const projects = [
     language: "Reactjs, Tailwind CSS",
     demoLink: "https://nexus-flow-hackthon-project.vercel.app/",
     codeLink: "https://github.com/Sri-dinesh/Nexus-flow-hackthonProject",
-    imageUrl: "/src/assets/nexusFlow.png",
+    imageUrl: "/assets/nexusFlow.png",
   },
   {
     title: "Python Chat Application",
@@ -33,7 +33,7 @@ export const projects = [
     language: "Python, Flask, Socket.IO, HTML, CSS",
     demoLink: "https://python-chat-app-wj7x.onrender.com/",
     codeLink: "https://github.com/Sri-dinesh/Python-Chat-App",
-    imageUrl: "/src/assets/pythonChat.png",
+    imageUrl: "/assets/pythonChat.png",
   },
   {
     title: "Ecommerce Website",
@@ -42,7 +42,7 @@ export const projects = [
     language: "HTML, CSS, JavaScript",
     demoLink: "https://pixelperfect-ecommmerce.vercel.app/",
     codeLink: "https://github.com/Sri-dinesh/Redstore-ecommerce",
-    imageUrl: "/src/assets/ecommerce.png",
+    imageUrl: "/assets/ecommerce.png",
   },
   {
     title: "2048 Game",
@@ -51,7 +51,7 @@ export const projects = [
     language: "HTML, CSS, JavaScript",
     demoLink: "https://sri-dinesh.github.io/2048-Web-App/",
     codeLink: "https://github.com/Sri-dinesh/2048-Web-App",
-    imageUrl: "/src/assets/2048game.png",
+    imageUrl: "/assets/2048game.png",
   },
   {
     title: "TODO List",
@@ -60,6 +60,6 @@ export const projects = [
     language: "HTML, CSS, JavaScript",
     demoLink: "https://dineshtodo.vercel.app/",
     codeLink: "https://github.com/Sri-dinesh/CBTCIP",
-    imageUrl: "/src/assets/todo.png",
+    imageUrl: "/assets/todo.png",
   },
 ];
