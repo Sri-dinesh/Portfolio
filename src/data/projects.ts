@@ -1,0 +1,65 @@
+export const projects = [
+  {
+    title: "SparkCV - AI Resume Builder",
+    description:
+      "AI resume builder with real-time editing, ATS optimization for job-ready resume in minutes.",
+    language: "NextJS, Reactjs, PostgreSQl, Tailwind CSS, Stripe",
+    demoLink: "https://sparkcv.vercel.app/",
+    codeLink: "https://github.com/Sri-dinesh/resume-builder-ai",
+    imageUrl: "/src/assets/ai resume builder.png",
+  },
+  {
+    title: "AI Drawing Calculator",
+    description:
+      "Built an AI calculator that instantly turns doodles into perfect equations with zero delay and 100% accuracy.",
+    language: "Reactjs, Python, Gemini API, Tailwind CSS",
+    demoLink: "https://ai-smartsketch.onrender.com/",
+    codeLink: "https://github.com/Sri-dinesh/AI-SmartSketch",
+    imageUrl: "/src/assets/calculator.png",
+  },
+  {
+    title: "Nexus Flow(Real Estate)",
+    description:
+      "A real estate platform that connects buyers and sellers, offering a seamless experience for browsing properties. ",
+    language: "Reactjs, Tailwind CSS",
+    demoLink: "https://nexus-flow-hackthon-project.vercel.app/",
+    codeLink: "https://github.com/Sri-dinesh/Nexus-flow-hackthonProject",
+    imageUrl: "/src/assets/nexusFlow.png",
+  },
+  {
+    title: "Python Chat Application",
+    description:
+      "A real-time chat application allowing users to communicate seamlessly.",
+    language: "Python, Flask, Socket.IO, HTML, CSS",
+    demoLink: "https://python-chat-app-wj7x.onrender.com/",
+    codeLink: "https://github.com/Sri-dinesh/Python-Chat-App",
+    imageUrl: "/src/assets/pythonChat.png",
+  },
+  {
+    title: "Ecommerce Website",
+    description:
+      "A e-commerce website with a modern design, featuring product listings, cart, and checkout functionality.",
+    language: "HTML, CSS, JavaScript",
+    demoLink: "https://pixelperfect-ecommmerce.vercel.app/",
+    codeLink: "https://github.com/Sri-dinesh/Redstore-ecommerce",
+    imageUrl: "/src/assets/ecommerce.png",
+  },
+  {
+    title: "2048 Game",
+    description:
+      "A web-based version of the popular 2048 game, with responsive design for an engaging user experience.",
+    language: "HTML, CSS, JavaScript",
+    demoLink: "https://sri-dinesh.github.io/2048-Web-App/",
+    codeLink: "https://github.com/Sri-dinesh/2048-Web-App",
+    imageUrl: "/src/assets/2048game.png",
+  },
+  {
+    title: "TODO List",
+    description:
+      "A simple and intuitive application that allows users to manage tasks for adding, editing, & deleting tasks.",
+    language: "HTML, CSS, JavaScript",
+    demoLink: "https://dineshtodo.vercel.app/",
+    codeLink: "https://github.com/Sri-dinesh/CBTCIP",
+    imageUrl: "/src/assets/todo.png",
+  },
+];
