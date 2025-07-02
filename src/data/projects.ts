@@ -6,7 +6,7 @@ export const projects = [
     language: "NextJS, React, PostgreSQl, Tailwind CSS, Stripe",
     demoLink: "https://sparkcv.vercel.app/",
     codeLink: "https://github.com/Sri-dinesh/resume-builder-ai",
-    imageUrl: "/assets/ai resume builder.png",
+    imageUrl: "/assets/ai resume builder.webp",
   },
   {
     title: "AI Drawing Calculator",
@@ -15,7 +15,7 @@ export const projects = [
     language: "React, Python, Gemini API, Tailwind CSS",
     demoLink: "https://ai-smartsketch.onrender.com/",
     codeLink: "https://github.com/Sri-dinesh/AI-SmartSketch",
-    imageUrl: "/assets/calculator.png",
+    imageUrl: "/assets/calculator.webp",
   },
   {
     title: "Twyned - Social Media App",
@@ -24,7 +24,7 @@ export const projects = [
     language: "NextJS, React, PostgreSQL, Tailwind CSS",
     demoLink: "https://twyned-nextjs.vercel.app/",
     codeLink: "https://github.com/Sri-dinesh/Twyned-nextjs",
-    imageUrl: "/assets/twynedNextjs.png",
+    imageUrl: "/assets/twynedNextjs.webp",
   },
   {
     title: "Convo - Chat Application",
@@ -33,7 +33,7 @@ export const projects = [
     language: "React, Express.js, Node.js, Socket.io, MongoDB",
     demoLink: "https://convo-chat-app-m853.onrender.com/",
     codeLink: "https://github.com/Sri-dinesh/Convo-Chat-App",
-    imageUrl: "/assets/application-demo.png",
+    imageUrl: "/assets/application-demo.webp",
   },
   {
     title: "Nexus Flow(Real Estate)",
@@ -42,7 +42,7 @@ export const projects = [
     language: "React, Tailwind CSS",
     demoLink: "https://nexus-flow-hackthon-project.vercel.app/",
     codeLink: "https://github.com/Sri-dinesh/Nexus-flow-hackthonProject",
-    imageUrl: "/assets/nexusFlow.png",
+    imageUrl: "/assets/nexusFlow.webp",
   },
   {
     title: "Python Chat Application",
@@ -51,7 +51,7 @@ export const projects = [
     language: "Python, Flask, Socket.IO, HTML, CSS",
     demoLink: "https://python-chat-app-wj7x.onrender.com/",
     codeLink: "https://github.com/Sri-dinesh/Python-Chat-App",
-    imageUrl: "/assets/pythonChat.png",
+    imageUrl: "/assets/pythonChat.webp",
   },
   {
     title: "Ecommerce Website",
@@ -60,7 +60,7 @@ export const projects = [
     language: "HTML, CSS, JavaScript",
     demoLink: "https://pixelperfect-ecommmerce.vercel.app/",
     codeLink: "https://github.com/Sri-dinesh/Redstore-ecommerce",
-    imageUrl: "/assets/ecommerce.png",
+    imageUrl: "/assets/ecommerce.webp",
   },
   {
     title: "Wordle Multiplayer",
@@ -78,7 +78,7 @@ export const projects = [
     language: "HTML, CSS, JavaScript",
     demoLink: "https://sri-dinesh.github.io/2048-Web-App/",
     codeLink: "https://github.com/Sri-dinesh/2048-Web-App",
-    imageUrl: "/assets/2048game.png",
+    imageUrl: "/assets/2048game.webp",
   },
   {
     title: "TODO List",
@@ -87,6 +87,6 @@ export const projects = [
     language: "HTML, CSS, JavaScript",
     demoLink: "https://dineshtodo.vercel.app/",
     codeLink: "https://github.com/Sri-dinesh/CBTCIP",
-    imageUrl: "/assets/todo.png",
+    imageUrl: "/assets/todo.webp",
   },
 ];

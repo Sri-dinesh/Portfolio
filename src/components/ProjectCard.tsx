@@ -27,6 +27,8 @@ export function ProjectCard({
             src={imageUrl}
             alt={title}
             className="w-full h-full object-cover"
+            decoding="async"
+            loading="lazy"
           />
         ) : (
           <div className="w-full h-full bg-gray-200 dark:bg-gray-800 transition-colors" />

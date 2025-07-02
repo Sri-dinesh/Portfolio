@@ -3,7 +3,7 @@ import { ContactForm } from "./components/ContactForm";
 import { ContactLinks } from "./components/ContactLinks";
 import { EducationCard } from "./components/EducationCard";
 import { ExperienceCard } from "./components/ExperienceCard";
-import Header from "./components/Header";
+import Header  from "./components/Header";
 import { ProjectCard } from "./components/ProjectCard";
 import { Skills } from "./components/Skills";
 import { education } from "./data/education";
@@ -32,7 +32,7 @@ function BentoGrid() {
       <HeroCard
         initials="SD"
         name="S Sridinesh"
-        title="Software Developer | UI/UX Designer"
+        title="Frontend Developer | UI/UX Designer"
         description="Turning ideas into interactive web realities."
       />
 
