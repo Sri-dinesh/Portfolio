@@ -6,11 +6,12 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/#contact", label: "Contact" },
+  { href: "/blog", label: "Blogs" },
 ];
 
 export default function Header() {
@@ -24,7 +25,6 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
-          {/* <h1 className="text-lg font-medium text-black">Dev Lab</h1> */}
           <a
             className="text-lg font-medium text-black"
             href="#">

@@ -1,6 +1,22 @@
-import { skills } from "../data/skills.ts";
-
 export function Skills() {
+  const skills = [
+    "React",
+    "JavaScript",
+    "TypeScript",
+    "HTML/CSS",
+    "Python",
+    "Flask",
+    "Java",
+    "MySQL",
+    "PostgreSQL",
+    "Tailwind CSS",
+    "Bootstrap",
+    "Git",
+    "GitHub",
+    "Figma",
+    "Framer",
+  ];
+
   return (
     <div
       id="skills"

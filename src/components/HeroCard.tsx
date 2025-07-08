@@ -20,9 +20,7 @@ export function HeroCard({
           <div className="w-12 h-12 bg-white/10 rounded-full mb-6 flex items-center justify-center text-sm font-medium">
             {initials}
           </div>
-          <h2 className="text-2xl sm:text-3xl font-light mb-2 font-mono">
-            {name}
-          </h2>
+          <h2 className="text-2xl sm:text-3xl  mb-2 font-sans">{name}</h2>
           <p className="text-lg text-white/70 mb-4">{title}</p>
         </div>
         <p className="text-sm text-white/60 leading-relaxed">{description}</p>

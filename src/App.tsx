@@ -3,11 +3,9 @@ import { ContactForm } from "./components/ContactForm";
 import { ContactLinks } from "./components/ContactLinks";
 import { EducationCard } from "./components/EducationCard";
 import { ExperienceCard } from "./components/ExperienceCard";
-import Header  from "./components/Header";
+import Header from "./components/Header";
 import { ProjectCard } from "./components/ProjectCard";
 import { Skills } from "./components/Skills";
-import { education } from "./data/education";
-import { experiences } from "./data/experience";
 import { projects } from "./data/projects";
 import { HeroCard } from "./components/HeroCard";
 import { CodeIllustration } from "./components/CodeIllustration";
@@ -15,9 +13,7 @@ import { CodeIllustration } from "./components/CodeIllustration";
 export default function App() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
       <Header />
-      {/* Main Content */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-8">
         <BentoGrid />
       </main>
@@ -74,15 +70,22 @@ function BentoGrid() {
         <div className="flex-1 h-px bg-gray-200"></div>
       </div>
 
-      {experiences.map((experience, index) => (
-        <ExperienceCard
-          key={index}
-          title={experience.title}
-          company={experience.company}
-          period={experience.period}
-          description={experience.description}
-        />
-      ))}
+      <ExperienceCard
+        title={"UI/UX Designer"}
+        company={"Nousverse LLP"}
+        period={"2024 May - November"}
+        description={
+          "Designed cross-platform UI/UX solutions, improving engagement by 18%, navigation by 30%, and feedback speed by 25% using Figma and user research."
+        }
+      />
+      <ExperienceCard
+        title={"Web Developer Intern"}
+        company={"CipherByte Technologies"}
+        period={"2024 May - June"}
+        description={
+          "Developed 5+ responsive websites with React and Tailwind CSS, achieving 98% compatibility and 40% faster load times through optimization."
+        }
+      />
 
       {/* Education Section */}
       <div className="sm:col-span-2 lg:col-span-4 flex items-center gap-4 py-2">
@@ -91,15 +94,7 @@ function BentoGrid() {
         <div className="flex-1 h-px bg-gray-200"></div>
       </div>
 
-      {education.map((edu, index) => (
-        <EducationCard
-          key={index}
-          degree={edu.degree}
-          institution={edu.institution}
-          period={edu.period}
-          cgpa={edu.cgpa}
-        />
-      ))}
+      <EducationCard />
 
       {/* Section Divider - Contact */}
       <div className="sm:col-span-2 lg:col-span-4 flex items-center gap-4 py-2">
@@ -110,9 +105,7 @@ function BentoGrid() {
         <div className="flex-1 h-px bg-gray-200 dark:bg-gray-800"></div>
       </div>
 
-      {/* Contact Form */}
       <ContactForm />
-      {/* Contact Links */}
       <ContactLinks />
     </div>
   );
