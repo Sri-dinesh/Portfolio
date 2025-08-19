@@ -9,6 +9,7 @@ import { Skills } from "./components/Skills";
 import { projects } from "./data/projects";
 import { HeroCard } from "./components/HeroCard";
 import { CodeIllustration } from "./components/CodeIllustration";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-8">
         <BentoGrid />
       </main>
+      <ScrollToTopButton />
     </div>
   );
 }

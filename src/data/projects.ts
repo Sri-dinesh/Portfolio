@@ -18,6 +18,15 @@ export const projects = [
     imageUrl: "/assets/calculator.webp",
   },
   {
+    title: "NEO Earth Tracker",
+    description:
+      "NEO Tracker is a web application that monitors near-Earth objects using NASA data, providing interactive visualizations, risk assessments, and real-time alerts.",
+    language: "React, NASA API, Tailwind CSS",
+    demoLink: "https://neo-earth-tracker.vercel.app/",
+    codeLink: "https://github.com/Sri-dinesh/NEO-tracker",
+    imageUrl: "/assets/neo-earth.webp",
+  },
+  {
     title: "Twyned - Social Media App",
     description:
       "A social media platform that allows users to connect, share content, and engage with each other.",
