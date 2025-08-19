@@ -8,6 +8,7 @@ export function Skills() {
     "Flask",
     "Java",
     "MySQL",
+    "MongoDB",
     "PostgreSQL",
     "Tailwind CSS",
     "Bootstrap",

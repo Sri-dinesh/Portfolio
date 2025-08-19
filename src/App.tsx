@@ -30,7 +30,7 @@ function BentoGrid() {
       <HeroCard
         initials="SD"
         name="S Sridinesh"
-        title="Frontend Developer | UI/UX Designer"
+        title="Web Developer | UI/UX Designer"
         description="Turning ideas into interactive web realities."
       />
 
@@ -73,11 +73,11 @@ function BentoGrid() {
       </div>
 
       <ExperienceCard
-        title={"UI/UX Designer"}
-        company={"Nousverse LLP"}
-        period={"2024 May - November"}
+        title={"Project Intern"}
+        company={"ACTS CDAC HYDERABAD"}
+        period={"2024 May - June"}
         description={
-          "Designed cross-platform UI/UX solutions, improving engagement by 18%, navigation by 30%, and feedback speed by 25% using Figma and user research."
+          "Contributed to the ISEA portal by developing responsive UI components, ensuring functionality, security, and cross-browser compatibility, while supporting training and cybersecurity initiatives."
         }
       />
       <ExperienceCard
@@ -86,6 +86,14 @@ function BentoGrid() {
         period={"2024 May - June"}
         description={
           "Developed 5+ responsive websites with React and Tailwind CSS, achieving 98% compatibility and 40% faster load times through optimization."
+        }
+      />
+      <ExperienceCard
+        title={"UI/UX Designer"}
+        company={"Nousverse LLP"}
+        period={"2024 May - November"}
+        description={
+          "Designed cross-platform UI/UX solutions, improving engagement by 18%, navigation by 30%, and feedback speed by 25% using Figma and user research."
         }
       />
 
