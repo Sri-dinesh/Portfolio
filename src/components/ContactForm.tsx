@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { Send } from "lucide-react";
 import { useState } from "react";
-import dotenv from "dotenv";
+import emailjs from "@emailjs/browser";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -28,32 +27,25 @@ export function ContactForm() {
     setStatus("loading");
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          access_key: process.env.VITE_WEB3FORMS_ACCESS_KEY,
-          name: formData.name,
-          email: formData.email,
+      const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
           message: formData.message,
-        }),
-      });
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-
-      const data = await response.json();
-
-      if (data.success) {
+      if (result.status === 200) {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
       } else {
         setStatus("error");
       }
     } catch (error) {
+      console.error("EmailJS error:", error);
       setStatus("error");
     }
   };
@@ -68,7 +60,7 @@ export function ContactForm() {
 
       {status === "success" && (
         <div className="mb-4 p-4 bg-green-50 text-green-700 text-sm rounded">
-          Thank you for your message. I'll get back to you soon!
+          ✅ Thank you for your message. I'll get back to you soon!
         </div>
       )}
 
@@ -78,9 +70,7 @@ export function ContactForm() {
         </div>
       )}
 
-      <form
-        onSubmit={handleSubmit}
-        className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="text"
           name="name"

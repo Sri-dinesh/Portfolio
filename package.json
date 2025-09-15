@@ -7,7 +7,9 @@
     "lint": "tsc -p . -noEmit --pretty false && vite build"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "clsx": "^2.1.1",
+    "emailjs": "^4.0.3",
     "framer-motion": "^12.16.0",
     "lucide-react": "^0.513.0",
     "react": "^19.0.0",
