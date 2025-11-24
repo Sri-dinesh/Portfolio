@@ -30,8 +30,8 @@ function BentoGrid() {
       <HeroCard
         initials="SD"
         name="S Sridinesh"
-        title="Web Developer | UI/UX Designer"
-        description="Turning ideas into interactive web realities."
+        title="FullStack Developer | UI/UX Designer"
+        description="Building applications with seamless user experiences."
       />
 
       {/* Code Illustration */}

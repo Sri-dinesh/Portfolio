@@ -7,6 +7,7 @@ export function Skills() {
     "React",
     "Node.js",
     "Express.js",
+    "RESTful APIs",
     "TypeScript",
     "Flask",
     "MySQL",

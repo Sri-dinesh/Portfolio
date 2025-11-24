@@ -6,6 +6,7 @@ import {
   Instagram,
   Twitter,
   File,
+  FileText,
 } from "lucide-react";
 import { JSX } from "react/jsx-dev-runtime";
 
@@ -28,9 +29,14 @@ export function ContactLinks() {
       label: "Phone",
     },
     {
-      href: "https://www.instagram.com/atomic_coding/",
+      href: "https://drive.google.com/file/d/1fO-eTQ5husAEKMeuARSghLAoG-TQ913Y/view?usp=sharing",
       icon: <File className="w-4 h-4" />,
       label: "Resume",
+    },
+    {
+      href: "https://medium.com/@sridineshS",
+      icon: <FileText className="w-4 h-4" />,
+      label: "Medium",
     },
     {
       href: "https://linkedin.com/in/sridinesh07",
