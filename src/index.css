@@ -33,11 +33,37 @@ body {
   @apply bg-gray-400 dark:bg-gray-600;
 }
 
-/* Smooth transitions */
+/* GPU-accelerated animations for smooth performance */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Hardware acceleration for motion elements */
+[data-framer-component-type] {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Smooth transitions - excluding transform which is handled by Framer Motion/GSAP */
 * {
-  transition-property: color, background-color, border-color, opacity, transform;
+  transition-property: color, background-color, border-color, opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
+}
+
+/* Disable transitions for reduced motion preference (accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Remove default button styles */
@@ -48,11 +74,13 @@ button {
 }
 
 /* Form elements */
-input, textarea {
+input,
+textarea {
   font-family: inherit;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none;
 }
 
@@ -97,6 +125,26 @@ input:focus, textarea:focus {
   animation: fadeIn 0.3s ease-out;
 }
 
+/* Hero section specific optimizations */
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%
+  );
+}
+
+/* Magnetic element base styles */
+.magnetic-element {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* Glow effects with GPU acceleration */
+.glow {
+  filter: blur(20px);
+  transform: translateZ(0);
+}
 
 /* Resume button styles */
 .resume-button {

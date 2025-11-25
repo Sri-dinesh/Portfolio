@@ -10,10 +10,12 @@ import { projects } from "./data/projects";
 import { HeroCard } from "./components/HeroCard";
 import { CodeIllustration } from "./components/CodeIllustration";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import { SignatureCursor } from "./components/SignatureCursor";
 
 export default function App() {
   return (
     <div className="min-h-screen bg-white">
+      <SignatureCursor />
       <Header />
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-8">
         <BentoGrid />
