@@ -53,49 +53,4 @@ export const projects = [
     codeLink: "https://github.com/Sri-dinesh/Nexus-flow-hackthonProject",
     imageUrl: "/assets/nexusFlow.webp",
   },
-  {
-    title: "Python Chat Application",
-    description:
-      "A real-time chat application allowing users to communicate seamlessly.",
-    language: "Python, Flask, Socket.IO, HTML, CSS",
-    demoLink: "https://python-chat-app-wj7x.onrender.com/",
-    codeLink: "https://github.com/Sri-dinesh/Python-Chat-App",
-    imageUrl: "/assets/pythonChat.webp",
-  },
-  {
-    title: "Ecommerce Website",
-    description:
-      "A e-commerce website with a modern design, featuring product listings, cart, and checkout functionality.",
-    language: "HTML, CSS, JavaScript",
-    demoLink: "https://pixelperfect-ecommmerce.vercel.app/",
-    codeLink: "https://github.com/Sri-dinesh/Redstore-ecommerce",
-    imageUrl: "/assets/ecommerce.webp",
-  },
-  {
-    title: "Wordle Multiplayer",
-    description:
-      "A multiplayer version of the popular Wordle game, allowing users to compete against each other in real-time.",
-    language: "Python, Flask, Socket.IO, JavaScript",
-    demoLink: "",
-    codeLink: "https://github.com/Sri-dinesh/World-Multiplayer",
-    imageUrl: "/assets/",
-  },
-  {
-    title: "2048 Game",
-    description:
-      "A web-based version of the popular 2048 game, with responsive design for an engaging user experience.",
-    language: "HTML, CSS, JavaScript",
-    demoLink: "https://sri-dinesh.github.io/2048-Web-App/",
-    codeLink: "https://github.com/Sri-dinesh/2048-Web-App",
-    imageUrl: "/assets/2048game.webp",
-  },
-  {
-    title: "TODO List",
-    description:
-      "A simple and intuitive application that allows users to manage tasks for adding, editing, & deleting tasks.",
-    language: "HTML, CSS, JavaScript",
-    demoLink: "https://dineshtodo.vercel.app/",
-    codeLink: "https://github.com/Sri-dinesh/CBTCIP",
-    imageUrl: "/assets/todo.webp",
-  },
 ];
