@@ -1,42 +1,55 @@
-export function Skills() {
-  const skills = [
-    "Java",
-    "Python",
-    "JavaScript",
-    "HTML/CSS",
-    "React",
-    "Node.js",
-    "Express.js",
-    "RESTful APIs",
-    "TypeScript",
-    "Flask",
-    "MySQL",
-    "MongoDB",
-    "PostgreSQL",
-    "Tailwind CSS",
-    "Bootstrap",
-    "Git",
-    "Figma",
-  ];
+import { motion } from "framer-motion";
 
+const skills = [
+  "Java",
+  "Python",
+  "TypeScript",
+  "JavaScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Express",
+  "PostgreSQL",
+  "MongoDB",
+  "Tailwind CSS",
+  "Framer Motion",
+  "Git",
+  "Docker",
+  "Figma",
+  "SQL",
+];
+
+export function Skills() {
   return (
-    <div
-      id="skills"
-      className="sm:col-span-2 lg:col-span-4 bg-white border border-gray-100 p-6"
-    >
-      <h3 className="text-sm font-medium text-black mb-4">
-        Skills & Technologies
-      </h3>
+    <div className="h-full flex flex-col justify-center">
       <div className="flex flex-wrap gap-2">
-        {skills.map((skill) => (
-          <span
-            key={skill}
-            className="px-3 py-1 bg-gray-100 text-gray-700 text-xs hover:bg-gray-200 transition-colors"
-          >
-            {skill}
-          </span>
+        {skills.map((skill, index) => (
+          <SkillPill key={skill} skill={skill} index={index} />
         ))}
       </div>
     </div>
+  );
+}
+
+function SkillPill({ skill, index }: { skill: string; index: number }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ 
+        duration: 0.4, 
+        delay: index * 0.02,
+        ease: [0.2, 0.8, 0.2, 1] 
+      }}
+      whileHover={{ 
+        scale: 1.05, 
+        backgroundColor: "rgba(255, 255, 255, 0.1)",
+        borderColor: "rgba(255, 255, 255, 0.25)"
+      }}
+      className="px-5 py-2.5 text-sm font-medium text-alabaster/90 bg-white/[0.03] border border-white/5 rounded-full cursor-default transition-colors duration-300"
+    >
+      {skill}
+    </motion.div>
   );
 }
