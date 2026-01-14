@@ -1,111 +1,121 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { User, Code, Briefcase, Mail, FileText } from "lucide-react";
 
 interface NavItem {
-  href: string;
+  id: string;
   label: string;
+  icon: React.ReactNode;
 }
 
 const navItems: NavItem[] = [
-  { href: "/#about", label: "About" },
-  { href: "/#skills", label: "Skills" },
-  { href: "/#projects", label: "Projects" },
-  { href: "/#experience", label: "Experience" },
-  { href: "/#contact", label: "Contact" },
-  { href: "/blog", label: "Blogs" },
+  { id: "about", label: "About", icon: <User size={18} /> },
+  { id: "skills", label: "Skills", icon: <Code size={18} /> },
+  { id: "projects", label: "Projects", icon: <Briefcase size={18} /> },
+  { id: "experience", label: "Experience", icon: <FileText size={18} /> },
+  { id: "contact", label: "Contact", icon: <Mail size={18} /> },
 ];
 
 export default function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+  // Track active section based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+
+      const sections = navItems.map((item) => document.getElementById(item.id));
+      const scrollPosition = window.scrollY + 100;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        if (section) {
+          const offsetTop = section.offsetTop;
+          const height = section.offsetHeight;
+
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + height
+          ) {
+            setActiveSection(navItems[i].id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial call
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 80, // Account for header height
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div className="flex items-center justify-between">
-          <a
-            className="text-lg font-medium text-black"
-            href="#">
-            Dev Lab
-          </a>
+    <>
+      {/* Hidden anchor points for navigation */}
+      <div className="fixed top-0 left-0 w-full h-0 pointer-events-none">
+        {navItems.map((item) => (
+          <div key={item.id} id={`nav-${item.id}`}></div>
+        ))}
+      </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:block">
-            <ul className="flex items-center space-x-8">
-              {navItems.map((item) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    className="text-sm text-gray-600 hover:text-black transition-colors">
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMobileMenu}
-            className="md:hidden p-2 text-gray-600 hover:text-black transition-colors"
-            aria-label="Toggle menu">
-            <div className="relative w-6 h-6">
-              <span
-                className={`absolute block h-0.5 w-6 bg-current transform transition-all duration-300 ease-out ${
-                  isMobileMenuOpen ? "rotate-45 top-3" : "top-1"
+      {/* Dock-style Navigation */}
+      <div
+        className={`fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 ${isScrolled ? "opacity-100" : "opacity-90"}`}
+      >
+        <div className="flex items-center bg-obsidian/80 backdrop-blur-xl border border-white/10 rounded-2xl px-2 py-2 shadow-2xl">
+          {navItems.map((item) => (
+            <motion.div
+              key={item.id}
+              className="mx-0.5"
+              whileHover={{ y: -4, scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              animate={{
+                y: activeSection === item.id ? -10 : 0,
+                scale: activeSection === item.id ? 1.1 : 1,
+              }}
+              transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            >
+              <button
+                onClick={() => scrollToSection(item.id)}
+                className={`flex flex-col items-center justify-center w-12 h-12 rounded-xl transition-all duration-300 ${
+                  activeSection === item.id
+                    ? "bg-emerald-500/20 text-emerald-400 shadow-lg shadow-emerald-500/20"
+                    : "text-pearl hover:text-alabaster hover:bg-white/10"
                 }`}
-              />
-              <span
-                className={`absolute block h-0.5 w-6 bg-current transform transition-all duration-300 ease-out top-3 ${
-                  isMobileMenuOpen ? "opacity-0" : "opacity-100"
-                }`}
-              />
-              <span
-                className={`absolute block h-0.5 w-6 bg-current transform transition-all duration-300 ease-out ${
-                  isMobileMenuOpen ? "-rotate-45 top-3" : "top-5"
-                }`}
-              />
-            </div>
-          </button>
-        </div>
-
-        {/* Mobile Navigation Overlay */}
-        <div
-          className={`md:hidden fixed inset-0 top-[73px] bg-black/20 backdrop-blur-sm transition-all duration-300 ${
-            isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}>
-          <nav
-            className={`bg-white/95 backdrop-blur-md border-b border-gray-100 transform transition-all duration-300 ease-out ${
-              isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-            }`}>
-            <ul className="px-4 py-8 space-y-1">
-              {navItems.map((item, index) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    className={`block py-3 px-4 text-gray-700 hover:text-black hover:bg-white/20 hover:backdrop-blur-sm rounded-lg transition-all duration-200 transform ${
-                      isMobileMenuOpen
-                        ? `translate-x-0 opacity-100`
-                        : "translate-x-4 opacity-0"
-                    }`}
-                    style={{
-                      transitionDelay: isMobileMenuOpen
-                        ? `${index * 50}ms`
-                        : "0ms",
-                    }}
-                    onClick={() => setIsMobileMenuOpen(false)}>
-                    <span className="text-sm font-light tracking-wide">
-                      {item.label}
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+                aria-label={item.label}
+                title={item.label}
+              >
+                <div className="flex items-center justify-center h-6 mb-0.5">
+                  {item.icon}
+                </div>
+                <motion.span
+                  className="text-[10px] font-medium"
+                  initial={{ opacity: 0, y: 5 }}
+                  animate={{
+                    opacity: activeSection === item.id ? 1 : 0,
+                    y: activeSection === item.id ? 0 : 5,
+                  }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {item.label}
+                </motion.span>
+              </button>
+            </motion.div>
+          ))}
         </div>
       </div>
-    </header>
+    </>
   );
 }
