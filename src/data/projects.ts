@@ -1,4 +1,13 @@
-export const projects = [
+export interface Project {
+  title?: string;
+  description?: string;
+  language?: string;
+  demoLink?: string;
+  codeLink?: string;
+  imageUrl?: string;
+}
+
+export const projects: Project[] = [
   {
     title: "SparkCV - AI Resume Builder",
     description:
@@ -9,7 +18,7 @@ export const projects = [
     imageUrl: "/assets/ai resume builder.webp",
   },
   {
-    title: "AI Drawing Calculator",
+    title: "CogniSketch - AI Drawing Analyzer",
     description:
       "Built an AI calculator that instantly turns doodles into perfect equations with zero delay and 100% accuracy.",
     language: "React, Python, Gemini API, Tailwind CSS",
@@ -18,20 +27,11 @@ export const projects = [
     imageUrl: "/assets/calculator.webp",
   },
   {
-    title: "NEO Earth Tracker",
-    description:
-      "NEO Tracker is a web application that monitors near-Earth objects using NASA data, providing interactive visualizations, risk assessments, and real-time alerts.",
-    language: "React, NASA API, Tailwind CSS",
-    demoLink: "https://neo-earth-tracker.vercel.app/",
-    codeLink: "https://github.com/Sri-dinesh/NEO-tracker",
-    imageUrl: "/assets/neo-earth.webp",
-  },
-  {
     title: "Twyned - Social Media App",
     description:
       "A social media platform that allows users to connect, share content, and engage with each other.",
     language: "NextJS, React, PostgreSQL, Tailwind CSS",
-    demoLink: "https://twyned-nextjs.vercel.app/",
+    demoLink: "https://twyned.vercel.app/",
     codeLink: "https://github.com/Sri-dinesh/Twyned-nextjs",
     imageUrl: "/assets/twynedNextjs.webp",
   },
@@ -45,12 +45,20 @@ export const projects = [
     imageUrl: "/assets/application-demo.webp",
   },
   {
-    title: "Nexus Flow(Real Estate)",
+    title: "NEO Earth Tracker - Near Earth Objects",
     description:
-      "A real estate platform that connects buyers and sellers, offering a seamless experience for browsing properties. ",
-    language: "React, Tailwind CSS",
-    demoLink: "https://nexus-flow-hackthon-project.vercel.app/",
-    codeLink: "https://github.com/Sri-dinesh/Nexus-flow-hackthonProject",
-    imageUrl: "/assets/nexusFlow.webp",
+      "NEO Tracker is a web application that monitors near-Earth objects using NASA data, providing interactive visualizations, risk assessments, and real-time alerts.",
+    language: "React, NASA API, Tailwind CSS",
+    demoLink: "https://neo-earth-tracker.vercel.app/",
+    codeLink: "https://github.com/Sri-dinesh/NEO-tracker",
+    imageUrl: "/assets/neo-earth.webp",
+  },
+  {
+    title: "MockingBird - Sarcasm Translator",
+    description:
+      "MockingBird is a sarcasm translator app that uses Google's Gemini AI to convert regular text into witty, sarcastic responses. Choose your level of savagery and let the mockingbird do its thing",
+    language: "React Native, Bun, Gemini API",
+    codeLink: "https://github.com/Sri-dinesh/MockingBird",
+    imageUrl: "/assets/mockingbird.webp",
   },
 ];
