@@ -1,15 +1,7 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
-import {
-  Send,
-  CheckCircle,
-  AlertCircle,
-  Clock,
-  MapPin,
-  Globe,
-} from "lucide-react";
-import { useState, useEffect } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -17,226 +9,180 @@ export function ContactForm() {
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState<
-    "idle" | "loading" | "success" | "error"
-  >("idle");
-  const [time, setTime] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      setTime(
-        now.toLocaleTimeString("en-US", {
-          hour: "2-digit",
-          minute: "2-digit",
-          hour12: false,
-          timeZone: "Asia/Kolkata",
-        }),
-      );
-    };
-    updateTime();
-    const interval = setInterval(updateTime, 60000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
 
-    try {
-      const result = await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-      );
+    const form = e.currentTarget;
+    const formDataObj = new FormData(form);
+    
+    formDataObj.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE");
+    formDataObj.append("from_name", "Portfolio Contact");
+    formDataObj.append("subject", `New Message from ${formData.name}`);
 
-      if (result.status === 200) {
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataObj,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
+        form.reset();
         setTimeout(() => setStatus("idle"), 5000);
       } else {
         setStatus("error");
+        setTimeout(() => setStatus("idle"), 5000);
       }
     } catch (error) {
-      console.error("EmailJS error:", error);
       setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
     }
   };
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const socialLinks = [
+    { label: "LINKEDIN", href: "https://linkedin.com/in/sridinesh07" },
+    { label: "GITHUB", href: "https://github.com/Sri-dinesh" },
+    { label: "MEDIUM", href: "https://medium.com/@sridineshS" },
+    { label: "TWITTER", href: "https://x.com/Sridinesh07" },
+    { label: "TWITCH", href: "https://twitch.tv/sridinesh" },
+    { label: "INSTAGRAM", href: "https://www.instagram.com/atomic_coding/" },
+  ];
+
   return (
-    <div className="relative h-full bg-obsidian-light/50 backdrop-blur-md border border-white/5 rounded-2xl overflow-hidden flex flex-col">
-      {/* Top Section: Header Deck */}
-      <div className="relative p-6 sm:p-8 border-b border-white/5 bg-white/[0.01]">
-        {/* Grid Pattern Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:14px_14px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+    <div className="w-full py-12 sm:py-20">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-5xl sm:text-8xl font-black tracking-tighter text-white mb-10 sm:mb-16 select-none"
+      >
+        SAY HELLO<span className="text-emerald-500">.</span>
+      </motion.h2>
 
-        <div className="relative z-10 flex flex-col gap-6">
-          <div className="flex items-start justify-between">
-            <div>
-              <h2 className="text-2xl font-semibold text-alabaster tracking-tight mb-2">
-                Let's start a project
-              </h2>
-              <p className="text-pearl/60 text-sm max-w-sm leading-relaxed">
-                Interested in working together? Drop me a message and let's
-                discuss your next big idea.
-              </p>
-            </div>
-            <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-              Available
-            </div>
-          </div>
+      <form
+        onSubmit={handleSubmit}
+        className="relative flex flex-col sm:flex-row border-y border-r border-white/10 overflow-hidden divide-y sm:divide-y-0 sm:divide-x divide-white/10"
+      >
+        <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
 
-          {/* Info Grid */}
-          <div className="grid grid-cols-3 gap-4 text-xs">
-            <div className="flex flex-col gap-1.5 p-3 rounded-lg bg-white/5 border border-white/5">
-              <div className="flex items-center gap-1.5 text-pearl/50">
-                <Clock className="w-3.5 h-3.5" />
-                <span>Local Time</span>
-              </div>
-              <span className="text-alabaster font-mono">{time} IST</span>
-            </div>
-            <div className="flex flex-col gap-1.5 p-3 rounded-lg bg-white/5 border border-white/5">
-              <div className="flex items-center gap-1.5 text-pearl/50">
-                <MapPin className="w-3.5 h-3.5" />
-                <span>Location</span>
-              </div>
-              <span className="text-alabaster font-mono">India</span>
-            </div>
-            <div className="flex flex-col gap-1.5 p-3 rounded-lg bg-white/5 border border-white/5">
-              <div className="flex items-center gap-1.5 text-pearl/50">
-                <Globe className="w-3.5 h-3.5" />
-                <span>Response</span>
-              </div>
-              <span className="text-alabaster font-mono">&lt; 2h</span>
-            </div>
-          </div>
+        <div className="flex-1 bg-transparent">
+          <input
+            type="text"
+            name="name"
+            placeholder="NAME"
+            required
+            value={formData.name}
+            onChange={handleInputChange}
+            className="w-full h-20 sm:h-24 bg-transparent px-6 text-sm font-medium text-white placeholder:text-white/20 focus:outline-none focus:bg-white/[0.02] transition-colors uppercase tracking-widest border-none outline-none rounded-none appearance-none ring-0 shadow-none"
+          />
         </div>
-      </div>
 
-      {/* Bottom Section: Form */}
-      <div className="flex-1 p-6 sm:p-8 flex flex-col justify-end bg-gradient-to-b from-transparent to-black/20">
-        {/* Status Messages */}
-        <AnimatePresence mode="wait">
+        <div className="flex-1 bg-transparent">
+          <input
+            type="email"
+            name="email"
+            placeholder="EMAIL"
+            required
+            value={formData.email}
+            onChange={handleInputChange}
+            className="w-full h-20 sm:h-24 bg-transparent px-6 text-sm font-medium text-white placeholder:text-white/20 focus:outline-none focus:bg-white/[0.02] transition-colors uppercase tracking-widest border-none outline-none rounded-none appearance-none ring-0 shadow-none"
+          />
+        </div>
+
+        <div className="flex-[2] bg-transparent">
+          <input
+            type="text"
+            name="message"
+            placeholder="MESSAGE"
+            required
+            value={formData.message}
+            onChange={handleInputChange}
+            className="w-full h-20 sm:h-24 bg-transparent px-6 text-sm font-medium text-white placeholder:text-white/20 focus:outline-none focus:bg-white/[0.02] transition-colors uppercase tracking-widest border-none outline-none rounded-none appearance-none ring-0 shadow-none"
+          />
+        </div>
+
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          className="w-full sm:w-auto sm:px-12 h-16 sm:h-24 bg-white text-black font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-emerald-500 transition-colors duration-500 disabled:opacity-50"
+        >
+          {status === "loading" ? (
+            <Loader2 className="w-4 h-4 animate-spin" />
+          ) : (
+            <>
+              <span>SEND</span>
+              <ArrowRight className="w-4 h-4" />
+            </>
+          )}
+        </button>
+
+        <AnimatePresence>
           {status === "success" && (
             <motion.div
-              initial={{ opacity: 0, height: 0, marginBottom: 0 }}
-              animate={{ opacity: 1, height: "auto", marginBottom: 20 }}
-              exit={{ opacity: 0, height: 0, marginBottom: 0 }}
-              className="overflow-hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-emerald-500 flex items-center justify-center gap-3 z-20"
             >
-              <div className="p-3 bg-emerald-500/10 border border-emerald-500/20 rounded-lg flex items-center gap-3 text-emerald-200 text-sm">
-                <CheckCircle className="w-4 h-4 flex-shrink-0" />
-                <span>Message received. Initiating response protocol.</span>
-              </div>
+              <CheckCircle className="w-5 h-5 text-black" />
+              <span className="text-black font-bold text-xs uppercase tracking-widest">Transmission Successful</span>
             </motion.div>
           )}
           {status === "error" && (
             <motion.div
-              initial={{ opacity: 0, height: 0, marginBottom: 0 }}
-              animate={{ opacity: 1, height: "auto", marginBottom: 20 }}
-              exit={{ opacity: 0, height: 0, marginBottom: 0 }}
-              className="overflow-hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-red-500 flex items-center justify-center gap-3 z-20"
             >
-              <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-lg flex items-center gap-3 text-red-200 text-sm">
-                <AlertCircle className="w-4 h-4 flex-shrink-0" />
-                <span>Connection failed. Please retry transmission.</span>
-              </div>
+              <AlertCircle className="w-5 h-5 text-white" />
+              <span className="text-white font-bold text-xs uppercase tracking-widest">Transmission Failed</span>
             </motion.div>
           )}
         </AnimatePresence>
+      </form>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div className="space-y-1.5">
-              <label
-                htmlFor="name"
-                className="text-xs font-medium text-pearl/80 ml-1 uppercase tracking-wider"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Ex. John Doe"
-                value={formData.name}
-                onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-lg focus:border-alabaster/30 focus:bg-white/[0.05] focus:outline-none transition-all duration-300 text-alabaster text-sm placeholder-pearl/20"
-                required
-              />
-            </div>
-            <div className="space-y-1.5">
-              <label
-                htmlFor="email"
-                className="text-xs font-medium text-pearl/80 ml-1 uppercase tracking-wider"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Ex. john@company.com"
-                value={formData.email}
-                onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-lg focus:border-alabaster/30 focus:bg-white/[0.05] focus:outline-none transition-all duration-300 text-alabaster text-sm placeholder-pearl/20"
-                required
-              />
-            </div>
-          </div>
-
-          <div className="space-y-1.5">
-            <label
-              htmlFor="message"
-              className="text-xs font-medium text-pearl/80 ml-1 uppercase tracking-wider"
+      <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8">
+        <div className="flex flex-wrap gap-x-8 gap-y-4">
+          {socialLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-bold text-white/40 hover:text-emerald-400 tracking-[0.2em] transition-colors"
             >
-              Message
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              rows={4}
-              placeholder="Tell me about your project..."
-              value={formData.message}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 bg-white/[0.03] border border-white/10 rounded-lg focus:border-alabaster/30 focus:bg-white/[0.05] focus:outline-none transition-all duration-300 text-alabaster text-sm placeholder-pearl/20 resize-none"
-              required
-            />
-          </div>
+              {link.label}
+            </a>
+          ))}
+        </div>
 
-          <button
-            type="submit"
-            disabled={status === "loading"}
-            className="w-full py-4 bg-alabaster hover:bg-white text-obsidian font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm uppercase tracking-wide disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_0_20px_-5px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_-5px_rgba(255,255,255,0.2)]"
+        <div className="hidden sm:block w-px h-4 bg-white/10" />
+
+        <div className="flex flex-wrap gap-x-8 gap-y-4">
+          <a
+            href="mailto:santhisridinesh@gmail.com"
+            className="text-[10px] font-bold text-white/40 hover:text-white tracking-[0.2em] transition-colors"
           >
-            {status === "loading" ? (
-              <>
-                <span className="w-4 h-4 border-2 border-obsidian/30 border-t-obsidian rounded-full animate-spin" />
-                <span>Processing...</span>
-              </>
-            ) : (
-              <>
-                <span>Send Transmission</span>
-                <Send className="w-4 h-4" />
-              </>
-            )}
-          </button>
-        </form>
+            SANTHISRIDINESH@GMAIL.COM
+          </a>
+          <a
+            href="tel:+919949887000"
+            className="text-[10px] font-bold text-white/40 hover:text-white tracking-[0.2em] transition-colors"
+          >
+            +91 99498 87000
+          </a>
+        </div>
       </div>
     </div>
   );
