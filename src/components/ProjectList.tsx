@@ -13,7 +13,7 @@ export function ProjectList() {
 
   return (
     <div className="w-full">
-      <div className="flex items-center gap-3 mb-10 group cursor-default">
+      <div className="flex items-center gap-3 mb-10 group">
         <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 group-hover:border-emerald-500/30 group-hover:bg-emerald-500/10 transition-colors duration-300">
           <Briefcase className="w-5 h-5 text-emerald-400" />
         </div>

@@ -11,7 +11,7 @@ const skills = [
 export function Skills() {
   return (
     <div className="w-full">
-      <div className="flex items-center gap-3 mb-10 group cursor-default">
+      <div className="flex items-center gap-3 mb-10 group">
         <div className="p-2.5 rounded-lg bg-white/5 border border-white/10 group-hover:border-emerald-500/30 group-hover:bg-emerald-500/10 transition-colors duration-300">
           <Box className="w-5 h-5 text-emerald-400" />
         </div>
@@ -64,7 +64,7 @@ function SkillPill({ name, index }: { name: string; index: number }) {
         ease: [0.2, 0.8, 0.2, 1]
       }}
       whileHover={{ scale: 1.02 }}
-      className="group/pill relative px-3 py-1.5 rounded-lg bg-white/[0.02] border border-white/5 hover:border-emerald-500/20 hover:bg-emerald-500/[0.03] transition-all duration-300 cursor-default overflow-hidden"
+      className="group/pill relative px-3 py-1.5 rounded-lg bg-white/[0.02] border border-white/5 hover:border-emerald-500/20 hover:bg-emerald-500/[0.03] transition-all duration-300 overflow-hidden"
     >
       <div className="absolute inset-0 bg-emerald-500/0 group-hover/pill:bg-emerald-500/[0.02] transition-colors duration-500" />
 
