@@ -28,7 +28,7 @@ export default function App() {
         sameAs: [
           "https://github.com/Sri-dinesh",
           "https://linkedin.com/in/sridinesh07",
-          "https://x.com/Sridinesh07",
+          "https://x.com/srixdevv",
         ],
         jobTitle: "Full-Stack Developer",
         address: {
@@ -47,9 +47,15 @@ export default function App() {
     description:
       "S Sridinesh is a full-stack developer in Hyderabad specializing in React, Node.js, and TypeScript. Explore projects, skills, and experience.",
     canonical: "https://sridinesh-portfolio.vercel.app/",
+    author: "S Sridinesh",
     keywords:
       "S Sridinesh, full-stack developer, React developer, Node.js developer, TypeScript developer, web developer Hyderabad, software engineer portfolio",
     ogType: "website",
+    ogSiteName: "S Sridinesh Portfolio",
+    ogLocale: "en_US",
+    twitterSite: "@srixdevv",
+    twitterCreator: "@srixdevv",
+    rssHref: "https://sridinesh-portfolio.vercel.app/rss.xml",
     schema: homeSchema,
   });
 

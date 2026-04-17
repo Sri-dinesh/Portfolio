@@ -9,7 +9,9 @@ export function ContactForm() {
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -17,8 +19,11 @@ export function ContactForm() {
 
     const form = e.currentTarget;
     const formDataObj = new FormData(form);
-    
-    formDataObj.append("access_key", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE");
+
+    formDataObj.append(
+      "access_key",
+      import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE",
+    );
     formDataObj.append("from_name", "Portfolio Contact");
     formDataObj.append("subject", `New Message from ${formData.name}`);
 
@@ -53,7 +58,7 @@ export function ContactForm() {
     { label: "LINKEDIN", href: "https://linkedin.com/in/sridinesh07" },
     { label: "GITHUB", href: "https://github.com/Sri-dinesh" },
     { label: "MEDIUM", href: "https://medium.com/@sridineshS" },
-    { label: "TWITTER", href: "https://x.com/Sridinesh07" },
+    { label: "X", href: "https://x.com/srixdevv" },
     { label: "TWITCH", href: "https://twitch.tv/sridinesh" },
     { label: "INSTAGRAM", href: "https://www.instagram.com/atomic_coding/" },
   ];
@@ -73,7 +78,12 @@ export function ContactForm() {
         onSubmit={handleSubmit}
         className="relative flex flex-col sm:flex-row border-y border-r border-white/10 overflow-hidden divide-y sm:divide-y-0 sm:divide-x divide-white/10"
       >
-        <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+        <input
+          type="checkbox"
+          name="botcheck"
+          className="hidden"
+          style={{ display: "none" }}
+        />
 
         <div className="flex-1 bg-transparent">
           <input
@@ -135,7 +145,9 @@ export function ContactForm() {
               className="absolute inset-0 bg-emerald-500 flex items-center justify-center gap-3 z-20"
             >
               <CheckCircle className="w-5 h-5 text-black" />
-              <span className="text-black font-bold text-xs uppercase tracking-widest">Transmission Successful</span>
+              <span className="text-black font-bold text-xs uppercase tracking-widest">
+                Transmission Successful
+              </span>
             </motion.div>
           )}
           {status === "error" && (
@@ -146,7 +158,9 @@ export function ContactForm() {
               className="absolute inset-0 bg-red-500 flex items-center justify-center gap-3 z-20"
             >
               <AlertCircle className="w-5 h-5 text-white" />
-              <span className="text-white font-bold text-xs uppercase tracking-widest">Transmission Failed</span>
+              <span className="text-white font-bold text-xs uppercase tracking-widest">
+                Transmission Failed
+              </span>
             </motion.div>
           )}
         </AnimatePresence>

@@ -1,26 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>S Sridinesh - Blog</title>
+    <title>S Sridinesh Portfolio Updates</title>
     <link>https://sridinesh-portfolio.vercel.app</link>
-    <description>Technical blog by S Sridinesh - Full Stack Developer. Writing about web development, programming, and software engineering topics.</description>
+    <description>Portfolio updates, featured projects, and technical writing by S Sridinesh, a Full-Stack Developer focused on React, Node.js, and TypeScript.</description>
     <language>en-us</language>
-    <lastBuildDate>2025-03-29T00:00:00+00:00</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://sridinesh-portfolio.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
-    <managingEditor>sridinesh@email.com (S Sridinesh)</managingEditor>
-    <webMaster>sridinesh@email.com (S Sridinesh)</webMaster>
+    <managingEditor>santhisridinesh@gmail.com (S Sridinesh)</managingEditor>
+    <webMaster>santhisridinesh@gmail.com (S Sridinesh)</webMaster>
+    <category>Portfolio</category>
     <category>Technology</category>
     <category>Programming</category>
     <category>Web Development</category>
-    <category>Computer Science</category>
 
     <item>
-      <title>Under the hood of localhost</title>
+      <title>Portfolio refresh with compact hero layout</title>
+      <link>https://sridinesh-portfolio.vercel.app/</link>
+      <guid isPermaLink="true">https://sridinesh-portfolio.vercel.app/</guid>
+      <description><![CDATA[The portfolio homepage now features a compact left-aligned hero, cleaner presentation, and stronger contact links for better browsing on every device.]]></description>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <author>santhisridinesh@gmail.com (S Sridinesh)</author>
+      <category>Portfolio</category>
+      <category>Web Development</category>
+    </item>
+
+    <item>
+      <title>Under the hood of “localhost”</title>
       <link>https://medium.com/@sridineshS/under-the-hood-of-localhost-33c290bd2029</link>
       <guid isPermaLink="true">https://medium.com/@sridineshS/under-the-hood-of-localhost-33c290bd2029</guid>
-      <description>Localhost isn't just some random word programmers made up—it's a reserved domain name that always points back to your own machine.</description>
+      <description><![CDATA[Localhost isn't just some random word programmers made up — it's a reserved domain name that always points back to your own machine.]]></description>
       <pubDate>Sat, 29 Mar 2025 00:00:00 +0000</pubDate>
-      <author>sridinesh@email.com (S Sridinesh)</author>
+      <author>santhisridinesh@gmail.com (S Sridinesh)</author>
       <category>Networking</category>
       <category>Computer Science</category>
       <category>Web Development</category>
