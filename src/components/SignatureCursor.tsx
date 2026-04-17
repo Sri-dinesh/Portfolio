@@ -5,23 +5,22 @@ import { ArrowUpRight, MousePointer2 } from "lucide-react";
 export function SignatureCursor() {
   const [isVisible, setIsVisible] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
-  const [hoverType, setHoverType] = useState<"default" | "link" | "button">("default");
+  const [hoverType, setHoverType] = useState<"default" | "link" | "button">(
+    "default",
+  );
 
   const mouseX = useMotionValue(-100);
   const mouseY = useMotionValue(-100);
 
-  // 1. Core Spring (Fastest, tightest to the actual mouse pointer)
   const coreSpring = { damping: 20, stiffness: 500, mass: 0.1 };
   const coreX = useSpring(mouseX, coreSpring);
   const coreY = useSpring(mouseY, coreSpring);
 
-  // 2. Viewfinder Reticle Spring (Medium lag for parallax pulling effect)
   const reticleSpring = { damping: 25, stiffness: 250, mass: 0.5 };
   const reticleX = useSpring(mouseX, reticleSpring);
   const reticleY = useSpring(mouseY, reticleSpring);
 
   useEffect(() => {
-    // Disable on touch devices
     if (
       typeof window !== "undefined" &&
       ("ontouchstart" in window || navigator.maxTouchPoints > 0)
@@ -34,24 +33,27 @@ export function SignatureCursor() {
       mouseY.set(e.clientY);
 
       const target = e.target as HTMLElement;
-      
+
       const isClickable = (el: HTMLElement | null): boolean => {
         if (!el) return false;
         const tagName = el.tagName.toLowerCase();
         const role = el.getAttribute("role");
         return (
-          tagName === "a" || 
-          tagName === "button" || 
+          tagName === "a" ||
+          tagName === "button" ||
           role === "button" ||
           window.getComputedStyle(el).cursor === "pointer"
         );
       };
 
-      const clickableEl = target.closest("a, button, [role='button']") as HTMLElement || target;
+      const clickableEl =
+        (target.closest("a, button, [role='button']") as HTMLElement) || target;
 
       if (isClickable(clickableEl)) {
         setIsHovering(true);
-        setHoverType(clickableEl.tagName.toLowerCase() === "a" ? "link" : "button");
+        setHoverType(
+          clickableEl.tagName.toLowerCase() === "a" ? "link" : "button",
+        );
       } else {
         setIsHovering(false);
         setHoverType("default");
@@ -90,15 +92,19 @@ export function SignatureCursor() {
 
   return (
     <>
-      {/* Normal state: clean crosshair-style viewfinder */}
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9998] mix-blend-difference"
-        style={{ x: reticleX, y: reticleY, translateX: "-50%", translateY: "-50%" }}
+        style={{
+          x: reticleX,
+          y: reticleY,
+          translateX: "-50%",
+          translateY: "-50%",
+        }}
         initial={{ opacity: 0, scale: 0.7 }}
-        animate={{ 
+        animate={{
           opacity: isVisible && !isHovering ? 1 : 0,
           scale: isHovering ? 0 : 1,
-          rotate: isHovering ? 0 : 45
+          rotate: isHovering ? 0 : 45,
         }}
         transition={{ duration: 0.3 }}
       >
@@ -117,9 +123,6 @@ export function SignatureCursor() {
         </div>
       </motion.div>
 
-      {/* 
-        LAYER 1: Core Diamond morphing into Interaction Lens (Fastest/Exact)
-      */}
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9999] flex items-center justify-center mix-blend-difference"
         style={{ x: coreX, y: coreY, translateX: "-50%", translateY: "-50%" }}
@@ -131,20 +134,19 @@ export function SignatureCursor() {
           animate={{
             width: isHovering ? 64 : 8,
             height: isHovering ? 64 : 8,
-            borderRadius: isHovering ? "50%" : "2px", // 2px = diamond, 50% = round lens
-            rotate: isHovering ? 0 : 45, // Diamond in normal state
+            borderRadius: isHovering ? "50%" : "2px",
+            rotate: isHovering ? 0 : 45,
             backgroundColor: "rgba(255, 255, 255, 1)",
           }}
           transition={{ type: "spring", stiffness: 400, damping: 28 }}
           className="relative flex items-center justify-center overflow-hidden"
         >
-          {/* Inner Custom Icon visible on hover */}
           <motion.div
             className="text-black absolute"
             initial={{ opacity: 0, scale: 0 }}
-            animate={{ 
+            animate={{
               opacity: isHovering ? 1 : 0,
-              scale: isHovering ? 1 : 0
+              scale: isHovering ? 1 : 0,
             }}
             transition={{ duration: 0.25, delay: isHovering ? 0.05 : 0 }}
           >
