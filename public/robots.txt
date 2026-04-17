@@ -30,4 +30,4 @@ Allow: /
 Sitemap: https://sridinesh-portfolio.vercel.app/sitemap.xml
 
 # Host
-Host: https://sridinesh-portfolio.vercel.app
+Host: sridinesh-portfolio.vercel.app

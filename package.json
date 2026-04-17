@@ -12,7 +12,7 @@
     "@emailjs/browser": "^4.4.1",
     "clsx": "^2.1.1",
     "emailjs": "^4.0.3",
-    "framer-motion": "^12.16.0",
+    "framer-motion": "^12.26.2",
     "gsap": "^3.13.0",
     "lucide-react": "^0.513.0",
     "react": "^19.0.0",

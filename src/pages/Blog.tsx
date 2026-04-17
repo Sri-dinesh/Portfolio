@@ -1,5 +1,7 @@
 import Header from "../components/Header";
 import { BlogCard } from "../components/BlogCard";
+import { useMemo } from "react";
+import { useSeo } from "../lib/seo";
 
 const blogs = [
   {
@@ -12,6 +14,50 @@ const blogs = [
 ];
 
 export default function Blog() {
+  const blogSchema = useMemo(
+    () => ({
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      name: "S Sridinesh Blog",
+      url: "https://sridinesh-portfolio.vercel.app/blog",
+      description:
+        "Technical writing about web development, React, Node.js, and software engineering.",
+      author: {
+        "@type": "Person",
+        name: "S Sridinesh",
+      },
+      blogPost: blogs.map((blog) => ({
+        "@type": "BlogPosting",
+        headline: blog.title,
+        datePublished: "2025-03-29",
+        url: blog.link,
+        description: blog.description,
+        author: {
+          "@type": "Person",
+          name: "S Sridinesh",
+        },
+      })),
+    }),
+    [],
+  );
+
+  useSeo({
+    title: "Blog | S Sridinesh | React & Full-Stack Development Articles",
+    description:
+      "Read blog posts by S Sridinesh on React, Node.js, TypeScript, and full-stack development best practices.",
+    canonical: "https://sridinesh-portfolio.vercel.app/blog",
+    author: "S Sridinesh",
+    keywords:
+      "React blog, full-stack development articles, Node.js tutorials, TypeScript blog, S Sridinesh blog",
+    ogType: "article",
+    ogSiteName: "S Sridinesh Portfolio",
+    ogLocale: "en_US",
+    twitterSite: "@srixdevv",
+    twitterCreator: "@srixdevv",
+    rssHref: "https://sridinesh-portfolio.vercel.app/rss.xml",
+    schema: blogSchema,
+  });
+
   return (
     <div className="min-h-screen bg-white">
       <Header />

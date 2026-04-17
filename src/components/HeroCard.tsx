@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
+import { Github, FileText, Linkedin } from "lucide-react";
 
 interface HeroCardProps {
   initials: string;
@@ -8,184 +8,119 @@ interface HeroCardProps {
   description: string;
 }
 
-// Floating particles for subtle background effect
-function FloatingParticle({
-  delay,
-  size,
-  x,
-  y,
-}: {
-  delay: number;
-  size: number;
-  x: number;
-  y: number;
-}) {
-  return (
-    <motion.div
-      className="absolute rounded-full bg-white/10"
-      style={{
-        width: size,
-        height: size,
-        left: `${x}%`,
-        top: `${y}%`,
-      }}
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{
-        opacity: [0, 0.6, 0],
-        scale: [0.5, 1, 0.5],
-        y: [-10, 10, -10],
-      }}
-      transition={{
-        duration: 4,
-        delay,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
-    />
-  );
-}
+export function HeroCard({ name, title }: HeroCardProps) {
+  const profileImage = "https://avatars.githubusercontent.com/u/101187384?v=4";
 
-export function HeroCard({
-  initials,
-  name,
-  title,
-  description,
-}: HeroCardProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
-
-  // Mouse position for gradient follow
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const springConfig = { damping: 25, stiffness: 200 };
-  const mouseXSpring = useSpring(mouseX, springConfig);
-  const mouseYSpring = useSpring(mouseY, springConfig);
-
-  // Transform mouse position to gradient position
-  const gradientX = useTransform(mouseXSpring, (val) => val);
-  const gradientY = useTransform(mouseYSpring, (val) => val);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    mouseX.set(e.clientX - rect.left);
-    mouseY.set(e.clientY - rect.top);
-  };
-
-  // Particles configuration
-  const particles = [
-    { delay: 0, size: 4, x: 15, y: 20 },
-    { delay: 1, size: 3, x: 80, y: 15 },
-    { delay: 2, size: 5, x: 70, y: 70 },
-    { delay: 0.5, size: 3, x: 25, y: 80 },
-    { delay: 1.5, size: 4, x: 90, y: 50 },
+  const links = [
+    {
+      href: "https://drive.google.com/file/d/1fO-eTQ5husAEKMeuARSghLAoG-TQ913Y/view?usp=sharing",
+      icon: FileText,
+      label: "Resume",
+    },
+    {
+      href: "https://github.com/Sri-dinesh",
+      icon: Github,
+      label: "GitHub",
+    },
+    {
+      href: "https://linkedin.com/in/sridinesh07",
+      icon: Linkedin,
+      label: "LinkedIn",
+    },
   ];
 
   return (
-    <motion.div
-      ref={containerRef}
-      id="about"
-      className="sm:col-span-2 lg:col-span-2 row-span-2 bg-custom-black text-white p-6 sm:p-8 relative group overflow-hidden cursor-default"
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-      role="region"
-      aria-label="About section">
-      {/* Animated gradient background that follows mouse */}
+    <div className="relative w-full flex justify-start pt-8 pb-4 px-4 md:px-8">
       <motion.div
-        className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        style={{
-          background: useTransform(
-            [gradientX, gradientY],
-            ([x, y]) =>
-              `radial-gradient(400px circle at ${x}px ${y}px, rgba(255,255,255,0.06), transparent 60%)`
-          ),
-        }}
-      />
-
-      {/* Subtle grid pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.02] pointer-events-none"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), 
-                           linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-          backgroundSize: "40px 40px",
-        }}
-      />
-
-      {/* Floating particles */}
-      {particles.map((particle, i) => (
-        <FloatingParticle key={i} {...particle} />
-      ))}
-
-      {/* Corner accent */}
-      <motion.div
-        className="absolute top-0 right-0 w-32 h-32 pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.8 }}>
-        <svg viewBox="0 0 100 100" className="w-full h-full">
-          <motion.path
-            d="M100,0 L100,100 L0,100"
-            fill="none"
-            stroke="rgba(255,255,255,0.1)"
-            strokeWidth="0.5"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ delay: 1, duration: 1.5, ease: "easeInOut" }}
-          />
-        </svg>
-      </motion.div>
-
-      {/* Content container */}
-      <div className="h-full flex flex-col justify-between relative z-10">
-        <div>
-          {/* Initials badge */}
-          <div className="relative mb-6 inline-block">
-            {/* Initials circle */}
-            <div className="relative w-14 h-14 bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-sm rounded-full flex items-center justify-center text-sm font-semibold border border-white/10 shadow-lg">
-              <span className="bg-gradient-to-br from-white to-white/70 bg-clip-text text-transparent">
-                {initials}
-              </span>
-            </div>
+        className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-start gap-8 md:gap-10 w-full"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
+      >
+        <motion.div
+          className="relative w-40 h-40 md:w-56 md:h-56 shrink-0 rounded-full border border-white/10 p-2 bg-[#0d0d0e]/50 backdrop-blur-sm shadow-xl overflow-hidden group"
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.4 }}
+        >
+          <div className="w-full h-full rounded-full overflow-hidden relative border border-white/5">
+            <img
+              src={profileImage}
+              alt={name}
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+            />
+            <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.6)] rounded-full pointer-events-none" />
           </div>
 
-          {/* Name */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl mb-2 font-sans tracking-tight">
-            {name}
-          </h1>
+          <div className="absolute inset-0 border border-white/5 rounded-full rotate-45 scale-[1.03] group-hover:rotate-90 transition-transform duration-1000 ease-out" />
+        </motion.div>
 
-          {/* Title */}
-          <p className="text-base sm:text-lg text-white/70 mb-4 font-light">
-            {title}
-          </p>
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-6 md:gap-8 text-left">
+          <div className="flex flex-col items-start text-left">
+            <motion.h1
+              className="text-5xl md:text-6xl font-bold tracking-tighter text-white mb-2"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+            >
+              {name}
+            </motion.h1>
+
+            <motion.h2
+              className="text-lg md:text-xl text-white/50 font-light tracking-wide"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+            >
+              {title}
+            </motion.h2>
+          </div>
+
+          <motion.div
+            className="hidden md:block w-px h-16 bg-gradient-to-b from-white/30 to-transparent border-none shrink-0"
+            initial={{ opacity: 0, scaleY: 0 }}
+            animate={{ opacity: 1, scaleY: 1 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            style={{ originY: 0 }}
+          />
+
+          <motion.div
+            className="block md:hidden w-16 h-px bg-gradient-to-r from-white/30 to-transparent border-none shrink-0"
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={{ opacity: 1, scaleX: 1 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            style={{ originX: 0 }}
+          />
+
+          <motion.div
+            className="flex items-center gap-4"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+          >
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/[0.02] border border-white/10 overflow-hidden hover:border-white/30 transition-all duration-300"
+                aria-label={link.label}
+              >
+                <div className="absolute inset-0 pointer-events-none rounded-full overflow-hidden">
+                  <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-gradient-to-br from-transparent via-white/20 to-transparent rotate-45 -translate-x-[100%] -translate-y-[100%] group-hover:translate-x-[100%] group-hover:translate-y-[100%] transition-transform duration-[600ms] ease-out" />
+                </div>
+
+                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                <link.icon
+                  className="w-5 h-5 md:w-[22px] md:h-[22px] text-white/50 group-hover:text-white relative z-10 transition-colors duration-300"
+                  strokeWidth={1.5}
+                />
+              </a>
+            ))}
+          </motion.div>
         </div>
-
-        {/* Description */}
-        <p className="text-sm text-white/60 leading-relaxed max-w-md">
-          {description}
-        </p>
-
-        {/* Bottom accent line */}
-        <motion.div
-          className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-white/30 via-white/10 to-transparent"
-          initial={{ width: 0 }}
-          animate={{ width: isHovered ? "100%" : "60%" }}
-          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-        />
-      </div>
-
-      {/* Hover state overlay for extra polish */}
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-t from-white/[0.02] to-transparent pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isHovered ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-      />
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }

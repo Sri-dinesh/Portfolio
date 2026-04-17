@@ -1,23 +1,74 @@
-import { Briefcase, Calendar, Mail, User } from "lucide-react";
 import { ContactForm } from "./components/ContactForm";
-import { ContactLinks } from "./components/ContactLinks";
-import { EducationCard } from "./components/EducationCard";
-import { ExperienceCard } from "./components/ExperienceCard";
 import Header from "./components/Header";
-import { ProjectCard } from "./components/ProjectCard";
 import { Skills } from "./components/Skills";
-import { projects } from "./data/projects";
 import { HeroCard } from "./components/HeroCard";
-import { CodeIllustration } from "./components/CodeIllustration";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import { SignatureCursor } from "./components/SignatureCursor";
+import { TimelineSection } from "./components/TimelineSection";
+import { ProjectList } from "./components/ProjectList";
+import { useMemo } from "react";
+import { useSeo } from "./lib/seo";
 
 export default function App() {
+  const homeSchema = useMemo(
+    () => [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "S Sridinesh | Full-Stack Developer Portfolio",
+        url: "https://sridinesh-portfolio.vercel.app/",
+        description:
+          "Portfolio of S Sridinesh, a full-stack developer specializing in React, Node.js, and TypeScript.",
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "S Sridinesh",
+        url: "https://sridinesh-portfolio.vercel.app/",
+        sameAs: [
+          "https://github.com/Sri-dinesh",
+          "https://linkedin.com/in/sridinesh07",
+          "https://x.com/srixdevv",
+        ],
+        jobTitle: "Full-Stack Developer",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Hyderabad",
+          addressRegion: "Telangana",
+          addressCountry: "IN",
+        },
+      },
+    ],
+    [],
+  );
+
+  useSeo({
+    title: "S Sridinesh | Full-Stack Developer | React, Node.js, TypeScript",
+    description:
+      "S Sridinesh is a full-stack developer in Hyderabad specializing in React, Node.js, and TypeScript. Explore projects, skills, and experience.",
+    canonical: "https://sridinesh-portfolio.vercel.app/",
+    author: "S Sridinesh",
+    keywords:
+      "S Sridinesh, full-stack developer, React developer, Node.js developer, TypeScript developer, web developer Hyderabad, software engineer portfolio",
+    ogType: "website",
+    ogSiteName: "S Sridinesh Portfolio",
+    ogLocale: "en_US",
+    twitterSite: "@srixdevv",
+    twitterCreator: "@srixdevv",
+    rssHref: "https://sridinesh-portfolio.vercel.app/rss.xml",
+    schema: homeSchema,
+  });
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-obsidian text-alabaster selection:bg-charcoal-light selection:text-white pb-24 relative">
+      <div className="fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
+        <div className="absolute inset-0 bg-[radial-gradient(#a1a1a6_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.03]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80" />
+      </div>
+
       <SignatureCursor />
       <Header />
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-8">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 relative z-10">
         <BentoGrid />
       </main>
       <ScrollToTopButton />
@@ -27,98 +78,66 @@ export default function App() {
 
 function BentoGrid() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-      {/* Hero Card */}
-      <HeroCard
-        initials="SD"
-        name="S Sridinesh"
-        title="FullStack Developer | UI/UX Designer"
-        description="Building applications with seamless user experiences."
-      />
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      <section
+        id="about"
+        className="col-span-1 sm:col-span-1 lg:col-span-4 row-span-2 scroll-mt-20"
+        aria-labelledby="about-heading"
+      >
+        <h2 id="about-heading" className="sr-only">
+          About Me
+        </h2>
+        <HeroCard
+          initials="SD"
+          name="S Sridinesh"
+          title="Full-Stack Developer"
+          description="Building scalable web applications with clean code and seamless user experiences."
+        />
+      </section>
 
-      {/* Code Illustration */}
-      <CodeIllustration />
+      <section
+        className="sm:col-span-2 lg:col-span-4 scroll-mt-24"
+        id="skills"
+        aria-labelledby="skills-heading"
+      >
+        <h2 id="skills-heading" className="sr-only">
+          Skills & Technologies
+        </h2>
+        <Skills />
+      </section>
 
-      {/* Skills */}
-      <Skills />
-
-      {/* Section Divider - Projects Section */}
-      <div className="sm:col-span-2 lg:col-span-4 flex items-center gap-4 py-2">
-        <Briefcase className="w-4 h-4 text-black dark:text-white" />
-        <h2 className="text-lg font-medium text-black dark:text-white">
+      <section
+        id="projects"
+        className="sm:col-span-2 lg:col-span-4 scroll-mt-24"
+        aria-labelledby="projects-heading"
+      >
+        <h2 id="projects-heading" className="sr-only">
           Projects
         </h2>
-        <div className="flex-1 h-px bg-gray-200 dark:bg-gray-800"></div>
-      </div>
+        <ProjectList />
+      </section>
 
-      <div className="sm:col-span-2 lg:col-span-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              language={project.language}
-              demoLink={project.demoLink}
-              codeLink={project.codeLink}
-              imageUrl={project.imageUrl}
-            />
-          ))}
-        </div>
-      </div>
+      <section
+        className="sm:col-span-2 lg:col-span-4 scroll-mt-10"
+        id="experience"
+        aria-labelledby="experience-heading"
+      >
+        <h2 id="experience-heading" className="sr-only">
+          Experience & Education
+        </h2>
+        <TimelineSection />
+      </section>
 
-      {/* Experience Section */}
-      <div className="sm:col-span-2 lg:col-span-4 flex items-center gap-4 py-2">
-        <User className="w-4 h-4 text-black" />
-        <h2 className="text-lg font-medium text-black">Experience</h2>
-        <div className="flex-1 h-px bg-gray-200"></div>
-      </div>
-
-      <ExperienceCard
-        title={"Project Intern"}
-        company={"ACTS CDAC HYDERABAD"}
-        period={"2024 May - June"}
-        description={
-          "Contributed to the ISEA portal by developing responsive UI components, ensuring functionality, security, and cross-browser compatibility, while supporting training and cybersecurity initiatives."
-        }
-      />
-      <ExperienceCard
-        title={"Web Developer Intern"}
-        company={"CipherByte Technologies"}
-        period={"2024 May - June"}
-        description={
-          "Developed 5+ responsive websites with React and Tailwind CSS, achieving 98% compatibility and 40% faster load times through optimization."
-        }
-      />
-      <ExperienceCard
-        title={"UI/UX Designer"}
-        company={"Nousverse LLP"}
-        period={"2024 May - November"}
-        description={
-          "Designed cross-platform UI/UX solutions, improving engagement by 18%, navigation by 30%, and feedback speed by 25% using Figma and user research."
-        }
-      />
-
-      {/* Education Section */}
-      <div className="sm:col-span-2 lg:col-span-4 flex items-center gap-4 py-2">
-        <Calendar className="w-4 h-4 text-black" />
-        <h2 className="text-lg font-medium text-black">Education</h2>
-        <div className="flex-1 h-px bg-gray-200"></div>
-      </div>
-
-      <EducationCard />
-
-      {/* Section Divider - Contact */}
-      <div className="sm:col-span-2 lg:col-span-4 flex items-center gap-4 py-2">
-        <Mail className="w-4 h-4 text-black dark:text-white" />
-        <h2 className="text-lg font-medium text-black dark:text-white">
+      <section
+        className="sm:col-span-2 lg:col-span-4 scroll-mt-24"
+        id="contact"
+        aria-labelledby="contact-heading"
+      >
+        <h2 id="contact-heading" className="sr-only">
           Contact
         </h2>
-        <div className="flex-1 h-px bg-gray-200 dark:bg-gray-800"></div>
-      </div>
-
-      <ContactForm />
-      <ContactLinks />
+        <ContactForm />
+      </section>
     </div>
   );
 }
