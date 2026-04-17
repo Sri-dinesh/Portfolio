@@ -20,11 +20,24 @@ export function SignatureCursor() {
   const reticleX = useSpring(mouseX, reticleSpring);
   const reticleY = useSpring(mouseY, reticleSpring);
 
+  const isTouchOnlyDevice = (): boolean => {
+    if (typeof window === "undefined") return false;
+
+    const touchPoints = navigator.maxTouchPoints ?? 0;
+    const hasTouchEvent = "ontouchstart" in window;
+    const supportsFinePointer =
+      window.matchMedia?.("(pointer:fine)")?.matches ?? false;
+    const supportsHover =
+      window.matchMedia?.("(hover:hover)")?.matches ?? false;
+
+    return (
+      (touchPoints > 0 || hasTouchEvent) &&
+      !(supportsFinePointer && supportsHover)
+    );
+  };
+
   useEffect(() => {
-    if (
-      typeof window !== "undefined" &&
-      ("ontouchstart" in window || navigator.maxTouchPoints > 0)
-    ) {
+    if (isTouchOnlyDevice()) {
       return;
     }
 
@@ -83,10 +96,7 @@ export function SignatureCursor() {
     };
   }, [mouseX, mouseY, isVisible]);
 
-  if (
-    typeof window !== "undefined" &&
-    ("ontouchstart" in window || navigator.maxTouchPoints > 0)
-  ) {
+  if (isTouchOnlyDevice()) {
     return null;
   }
 
