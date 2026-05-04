@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { User, Code, Briefcase, Mail, FileText } from "lucide-react";
+import { User, Code, Briefcase, Mail, FileText, ScrollText } from "lucide-react";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 
 interface NavItem {
   id: string;
   label: string;
   icon: React.ReactNode;
+  path?: string;
 }
 
 const navItems: NavItem[] = [
@@ -14,17 +16,28 @@ const navItems: NavItem[] = [
   { id: "projects", label: "Projects", icon: <Briefcase size={16} /> },
   { id: "experience", label: "Experience", icon: <FileText size={16} /> },
   { id: "contact", label: "Contact", icon: <Mail size={16} /> },
+  { id: "blog", label: "Blog", icon: <ScrollText size={16} />, path: "/blog" },
 ];
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("");
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
+    if (location.pathname === "/blog") {
+      setActiveSection("blog");
+      return;
+    }
+
     const handleScroll = () => {
-      const sections = navItems.map((item) => document.getElementById(item.id));
+      const sections = navItems
+        .filter((item) => !item.path)
+        .map((item) => document.getElementById(item.id));
       const scrollPosition = window.scrollY + window.innerHeight / 3;
 
+      let currentSection = "";
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
         if (section) {
@@ -35,18 +48,34 @@ export default function Header() {
             scrollPosition >= offsetTop &&
             scrollPosition < offsetTop + height
           ) {
-            setActiveSection(navItems[i].id);
+            currentSection = navItems[i].id;
             break;
           }
         }
       }
+      setActiveSection(currentSection);
     };
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location.pathname]);
+
+  const handleNavClick = (item: NavItem) => {
+    if (item.path) {
+      navigate(item.path);
+    } else {
+      if (location.pathname !== "/") {
+        navigate(`/#${item.id}`);
+        setTimeout(() => {
+          scrollToSection(item.id);
+        }, 100);
+      } else {
+        scrollToSection(item.id);
+      }
+    }
+  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -75,7 +104,7 @@ export default function Header() {
           return (
             <button
               key={item.id}
-              onClick={() => scrollToSection(item.id)}
+              onClick={() => handleNavClick(item)}
               onMouseEnter={() => setHoveredItem(item.id)}
               onMouseLeave={() => setHoveredItem(null)}
               className="relative px-5 py-2.5 flex items-center gap-2.5 group outline-none"
