@@ -80,6 +80,7 @@ function SkillBadge({
         className="w-[14px] h-[14px] sm:w-[15px] sm:h-[15px] opacity-60 group-hover:opacity-100 transition-opacity duration-300 filter group-hover:brightness-125 select-none pointer-events-none"
         draggable={false}
         aria-hidden="true"
+        unoptimized={true}
       />
       <span className="text-xs sm:text-[13px] font-medium text-pearl/70 group-hover:text-alabaster transition-colors duration-300 tracking-wide select-none">
         {skill.name}

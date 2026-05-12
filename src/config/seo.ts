@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_CONFIG } from "./constants";
+import { SITE_CONFIG } from "./site";
 
 export function generateMetadata(
   title?: string,

@@ -15,7 +15,7 @@ export const projects: Project[] = [
     language: "NextJS, React, PostgreSQl, Tailwind CSS, Stripe",
     demoLink: "https://sparkcv.vercel.app/",
     codeLink: "https://github.com/Sri-dinesh/resume-builder-ai",
-    imageUrl: "/assets/ai resume builder.webp",
+    imageUrl: "/images/projects/ai resume builder.webp",
   },
   {
     title: "CogniSketch - AI Drawing Analyzer",
@@ -24,7 +24,7 @@ export const projects: Project[] = [
     language: "React, Python, Gemini API, Tailwind CSS",
     demoLink: "https://ai-smartsketch.onrender.com/",
     codeLink: "https://github.com/Sri-dinesh/AI-SmartSketch",
-    imageUrl: "/assets/calculator.webp",
+    imageUrl: "/images/projects/calculator.webp",
   },
   {
     title: "Twyned - Social Media App",
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     language: "NextJS, React, PostgreSQL, Tailwind CSS",
     demoLink: "https://twyned.vercel.app/",
     codeLink: "https://github.com/Sri-dinesh/Twyned-nextjs",
-    imageUrl: "/assets/twynedNextjs.webp",
+    imageUrl: "/images/projects/twynedNextjs.webp",
   },
   {
     title: "Convo - Chat Application",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     language: "React, Express.js, Node.js, Socket.io, MongoDB",
     demoLink: "https://convo-chat-app-m853.onrender.com/",
     codeLink: "https://github.com/Sri-dinesh/Convo-Chat-App",
-    imageUrl: "/assets/application-demo.webp",
+    imageUrl: "/images/projects/application-demo.webp",
   },
   {
     title: "NEO Earth Tracker - Near Earth Objects",
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     language: "React, NASA API, Tailwind CSS",
     demoLink: "https://neo-earth-tracker.vercel.app/",
     codeLink: "https://github.com/Sri-dinesh/NEO-tracker",
-    imageUrl: "/assets/neo-earth.webp",
+    imageUrl: "/images/projects/neo-earth.webp",
   },
   {
     title: "MockingBird - Sarcasm Translator",
@@ -59,6 +59,6 @@ export const projects: Project[] = [
       "MockingBird is a sarcasm translator app that uses Google's Gemini AI to convert regular text into witty, sarcastic responses. Choose your level of savagery and let the mockingbird do its thing",
     language: "React Native, Bun, Gemini API",
     codeLink: "https://github.com/Sri-dinesh/MockingBird",
-    imageUrl: "/assets/mockingbird.webp",
+    imageUrl: "/images/projects/mockingbird.webp",
   },
 ];

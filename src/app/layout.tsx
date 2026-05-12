@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "@/styles/globals.css";
-import { SignatureCursor } from "@/components/client/SignatureCursor";
-import ScrollToTopButton from "@/components/client/ScrollToTopButton";
+import "./globals.css";
+import { SignatureCursor } from "@/components/signature-cursor";
+import ScrollToTopButton from "@/components/scroll-to-top";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sridinesh-portfolio.vercel.app"),

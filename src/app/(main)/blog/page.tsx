@@ -1,5 +1,5 @@
-import Header from '@/components/client/Header';
-import { generateMetadata as generateSeoMetadata } from "@/lib/seo";
+import Navbar from '@/components/navbar';
+import { generateMetadata as generateSeoMetadata } from "@/config/seo";
 
 export const metadata = generateSeoMetadata(
   "Blog",
@@ -10,7 +10,7 @@ export const metadata = generateSeoMetadata(
 export default function BlogPage() {
   return (
     <>
-      <Header />
+      <Navbar />
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 relative z-10">
         <div className="min-h-[60vh] flex items-center justify-center">
           <div className="text-center">

@@ -3,12 +3,11 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { projects, Project } from "@/data/projects";
+import { projects, Project } from "@/constants/projects";
 import {
   ArrowUpRight,
   Github,
   ChevronDown,
-  ExternalLink,
   Briefcase,
 } from "lucide-react";
 import { cn } from "@/lib/utils";

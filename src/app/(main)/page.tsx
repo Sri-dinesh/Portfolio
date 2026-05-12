@@ -1,11 +1,11 @@
-import { ContactForm } from '@/components/client/ContactForm';
-import Header from '@/components/client/Header';
-import { Skills } from '@/components/client/Skills';
-import { HeroCard } from '@/components/client/HeroCard';
-import { TimelineSection } from '@/components/client/TimelineSection';
-import { ProjectList } from '@/components/client/ProjectList';
+import { ContactForm } from '@/components/contact-form';
+import Navbar from '@/components/navbar';
+import { Skills } from '@/components/skills';
+import { HeroCard } from '@/components/hero-card';
+import { TimelineSection } from '@/components/timeline-section';
+import { ProjectList } from '@/components/project-list';
 
-import { generateMetadata as generateSeoMetadata } from "@/lib/seo";
+import { generateMetadata as generateSeoMetadata } from "@/config/seo";
 
 export const metadata = generateSeoMetadata();
 
@@ -78,7 +78,7 @@ function BentoGrid() {
 export default function Home() {
   return (
     <>
-      <Header />
+      <Navbar />
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 relative z-10">
         <BentoGrid />
       </main>

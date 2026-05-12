@@ -1,7 +1,7 @@
 "use client";
 
 /* eslint-disable @typescript-eslint/no-misused-promises */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
@@ -16,6 +16,11 @@ export function ContactForm() {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -75,6 +80,7 @@ export function ContactForm() {
         SAY HELLO<span className="text-emerald-500">.</span>
       </motion.h2>
 
+      {mounted && (
       <form
         onSubmit={handleSubmit}
         className="relative flex flex-col sm:flex-row border-y border-r border-white/10 overflow-hidden divide-y sm:divide-y-0 sm:divide-x divide-white/10"
@@ -107,6 +113,7 @@ export function ContactForm() {
             value={formData.email}
             onChange={handleInputChange}
             className="w-full h-20 sm:h-24 bg-transparent px-6 text-sm font-medium text-white placeholder:text-white/20 focus:outline-none focus:bg-white/[0.02] transition-colors uppercase tracking-widest border-none outline-none rounded-none appearance-none ring-0 shadow-none"
+            suppressHydrationWarning
           />
         </div>
 
@@ -166,6 +173,7 @@ export function ContactForm() {
           )}
         </AnimatePresence>
       </form>
+      )}
 
       <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8">
         <div className="flex flex-wrap gap-x-8 gap-y-4">

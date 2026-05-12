@@ -29,12 +29,19 @@ const navItems: NavItem[] = [
   { id: "blog", label: "Blog", icon: <ScrollText size={16} />, href: "/blog" },
 ];
 
-export default function Header() {
+export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
     if (pathname === "/blog") {
       setActiveSection("blog");
       return;
@@ -69,7 +76,7 @@ export default function Header() {
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [pathname]);
+  }, [pathname, mounted]);
 
   const handleNavClick = (item: NavItem) => {
     if (item.href) {

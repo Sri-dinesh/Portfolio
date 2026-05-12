@@ -1,29 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   darkMode: "class",
   theme: {
     extend: {
       colors: {
-        // Apple-inspired Industrial Monochrome Palette
         obsidian: {
-          DEFAULT: "#0d0d0e", // Deep, rich background (not flat black)
-          light: "#161618", // Secondary surfaces
-          lighter: "#1c1c1e", // Elevated elements
+          DEFAULT: "#0d0d0e",
+          light: "#161618",
+          lighter: "#1c1c1e",
         },
         charcoal: {
-          DEFAULT: "#2c2c2e", // Borders / Dividers
-          light: "#3a3a3c", // Interactive elements
+          DEFAULT: "#2c2c2e",
+          light: "#3a3a3c",
           dark: "#1c1c1e",
         },
-        alabaster: "#f5f5f7", // Primary text (Luminous off-white)
-        pearl: "#a1a1a6", // Secondary text (Soft grey)
+        alabaster: "#f5f5f7",
+        pearl: "#a1a1a6",
 
-        // Refined Gray Scale (Cooler, Steel-like tones)
         gray: {
           50: "#fbfbfd",
           100: "#f5f5f7",
@@ -38,7 +32,6 @@ export default {
           950: "#1c1c1e",
         },
 
-        // Semantic mappings for backward compatibility
         hero: "#0d0d0e",
         "custom-black": "#050505",
       },
@@ -60,7 +53,7 @@ export default {
         88: "22rem",
       },
       animation: {
-        "fade-in": "fadeIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1)", // Smooth, premium easing
+        "fade-in": "fadeIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1)",
       },
       keyframes: {
         fadeIn: {

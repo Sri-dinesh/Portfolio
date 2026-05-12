@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { timelineData, TimelineItem } from "@/data/timeline";
+import { timelineData, TimelineItem } from "@/constants/experience";
 import { Briefcase, GraduationCap, Calendar, ChevronRight } from "lucide-react";
 
 export function TimelineSection() {
