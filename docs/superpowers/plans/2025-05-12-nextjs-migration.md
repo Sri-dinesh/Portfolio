@@ -13,6 +13,7 @@
 ## File Structure Overview
 
 ### New Next.js Structure
+
 ```
 app/
   ├── layout.tsx              # Root layout with providers
@@ -67,6 +68,7 @@ config/
 ### Task 1: Initialize Next.js 16 Project Structure
 
 **Files:**
+
 - Create: `app/layout.tsx`
 - Create: `app/page.tsx`
 - Create: `app/blog/page.tsx`
@@ -340,30 +342,30 @@ export default function BlogPage() {
 - [ ] **Step 7: Create next.config.ts**
 
 ```typescript
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [],
   },
   headers: async () => {
     return [
       {
-        source: '/:path*',
+        source: "/:path*",
         headers: [
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
+            key: "X-Content-Type-Options",
+            value: "nosniff",
           },
           {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN',
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
           },
           {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
+            key: "X-XSS-Protection",
+            value: "1; mode=block",
           },
         ],
       },

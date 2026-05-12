@@ -1,10 +1,17 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { User, Code, Briefcase, Mail, FileText, ScrollText } from 'lucide-react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import {
+  User,
+  Code,
+  Briefcase,
+  Mail,
+  FileText,
+  ScrollText,
+} from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface NavItem {
   id: string;
@@ -14,22 +21,22 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { id: 'about', label: 'About', icon: <User size={16} /> },
-  { id: 'skills', label: 'Skills', icon: <Code size={16} /> },
-  { id: 'projects', label: 'Projects', icon: <Briefcase size={16} /> },
-  { id: 'experience', label: 'Experience', icon: <FileText size={16} /> },
-  { id: 'contact', label: 'Contact', icon: <Mail size={16} /> },
-  { id: 'blog', label: 'Blog', icon: <ScrollText size={16} />, href: '/blog' },
+  { id: "about", label: "About", icon: <User size={16} /> },
+  { id: "skills", label: "Skills", icon: <Code size={16} /> },
+  { id: "projects", label: "Projects", icon: <Briefcase size={16} /> },
+  { id: "experience", label: "Experience", icon: <FileText size={16} /> },
+  { id: "contact", label: "Contact", icon: <Mail size={16} /> },
+  { id: "blog", label: "Blog", icon: <ScrollText size={16} />, href: "/blog" },
 ];
 
 export default function Header() {
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState("");
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
-    if (pathname === '/blog') {
-      setActiveSection('blog');
+    if (pathname === "/blog") {
+      setActiveSection("blog");
       return;
     }
 
@@ -39,7 +46,7 @@ export default function Header() {
         .map((item) => document.getElementById(item.id));
       const scrollPosition = window.scrollY + window.innerHeight / 3;
 
-      let currentSection = '';
+      let currentSection = "";
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
         if (section) {
@@ -58,10 +65,10 @@ export default function Header() {
       setActiveSection(currentSection);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     handleScroll();
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
 
   const handleNavClick = (item: NavItem) => {
@@ -69,8 +76,8 @@ export default function Header() {
       return;
     }
 
-    if (pathname !== '/') {
-      window.location.href = '/#' + item.id;
+    if (pathname !== "/") {
+      window.location.href = "/#" + item.id;
     } else {
       scrollToSection(item.id);
     }
@@ -85,7 +92,7 @@ export default function Header() {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
   };
@@ -106,11 +113,11 @@ export default function Header() {
           <motion.div
             layoutId="nav-active-pill"
             className={`absolute inset-0 rounded-full z-0 ${
-              isActive ? 'bg-white/10' : 'bg-white/5'
+              isActive ? "bg-white/10" : "bg-white/5"
             }`}
             transition={{
-              type: 'tween',
-              ease: 'easeOut',
+              type: "tween",
+              ease: "easeOut",
               duration: 0.2,
             }}
           >
@@ -120,7 +127,7 @@ export default function Header() {
 
         <span
           className={`relative z-10 transition-colors duration-200 ${
-            isSelected ? 'text-white' : 'text-white/40'
+            isSelected ? "text-white" : "text-white/40"
           }`}
         >
           {item.icon}
@@ -128,7 +135,7 @@ export default function Header() {
 
         <span
           className={`relative z-10 text-[13px] font-medium tracking-tight transition-colors duration-200 hidden md:block ${
-            isSelected ? 'text-white' : 'text-white/40'
+            isSelected ? "text-white" : "text-white/40"
           }`}
         >
           {item.label}

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import { useState } from "react";

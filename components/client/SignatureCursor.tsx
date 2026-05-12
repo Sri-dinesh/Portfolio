@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { motion, useSpring, useMotionValue } from 'framer-motion';
-import { ArrowUpRight, MousePointer2 } from 'lucide-react';
+import { useEffect, useState } from "react";
+import { motion, useSpring, useMotionValue } from "framer-motion";
+import { ArrowUpRight, MousePointer2 } from "lucide-react";
 
 export function SignatureCursor() {
   const [isVisible, setIsVisible] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
-  const [hoverType, setHoverType] = useState<'default' | 'link' | 'button'>(
-    'default',
+  const [hoverType, setHoverType] = useState<"default" | "link" | "button">(
+    "default",
   );
 
   const mouseX = useMotionValue(-100);
@@ -23,14 +23,14 @@ export function SignatureCursor() {
   const reticleY = useSpring(mouseY, reticleSpring);
 
   const isTouchOnlyDevice = (): boolean => {
-    if (typeof window === 'undefined') return false;
+    if (typeof window === "undefined") return false;
 
     const touchPoints = navigator.maxTouchPoints ?? 0;
-    const hasTouchEvent = 'ontouchstart' in window;
+    const hasTouchEvent = "ontouchstart" in window;
     const supportsFinePointer =
-      window.matchMedia?.('(pointer:fine)')?.matches ?? false;
+      window.matchMedia?.("(pointer:fine)")?.matches ?? false;
     const supportsHover =
-      window.matchMedia?.('(hover:hover)')?.matches ?? false;
+      window.matchMedia?.("(hover:hover)")?.matches ?? false;
 
     return (
       (touchPoints > 0 || hasTouchEvent) &&
@@ -52,12 +52,12 @@ export function SignatureCursor() {
       const isClickable = (el: HTMLElement | null): boolean => {
         if (!el) return false;
         const tagName = el.tagName.toLowerCase();
-        const role = el.getAttribute('role');
+        const role = el.getAttribute("role");
         return (
-          tagName === 'a' ||
-          tagName === 'button' ||
-          role === 'button' ||
-          window.getComputedStyle(el).cursor === 'pointer'
+          tagName === "a" ||
+          tagName === "button" ||
+          role === "button" ||
+          window.getComputedStyle(el).cursor === "pointer"
         );
       };
 
@@ -67,11 +67,11 @@ export function SignatureCursor() {
       if (isClickable(clickableEl)) {
         setIsHovering(true);
         setHoverType(
-          clickableEl.tagName.toLowerCase() === 'a' ? 'link' : 'button',
+          clickableEl.tagName.toLowerCase() === "a" ? "link" : "button",
         );
       } else {
         setIsHovering(false);
-        setHoverType('default');
+        setHoverType("default");
       }
 
       if (!isVisible) setIsVisible(true);
@@ -80,20 +80,20 @@ export function SignatureCursor() {
     const handleMouseLeave = () => setIsVisible(false);
     const handleMouseEnter = () => setIsVisible(true);
 
-    window.addEventListener('mousemove', handleMouseMove, { passive: true });
-    document.addEventListener('mouseleave', handleMouseLeave);
-    document.addEventListener('mouseenter', handleMouseEnter);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    document.addEventListener("mouseleave", handleMouseLeave);
+    document.addEventListener("mouseenter", handleMouseEnter);
 
-    const style = document.createElement('style');
-    style.id = 'signature-cursor-style';
-    style.textContent = '* { cursor: none !important; }';
+    const style = document.createElement("style");
+    style.id = "signature-cursor-style";
+    style.textContent = "* { cursor: none !important; }";
     document.head.appendChild(style);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseleave', handleMouseLeave);
-      document.removeEventListener('mouseenter', handleMouseEnter);
-      const existingStyle = document.getElementById('signature-cursor-style');
+      window.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseleave", handleMouseLeave);
+      document.removeEventListener("mouseenter", handleMouseEnter);
+      const existingStyle = document.getElementById("signature-cursor-style");
       if (existingStyle) existingStyle.remove();
     };
   }, [mouseX, mouseY, isVisible]);
@@ -109,8 +109,8 @@ export function SignatureCursor() {
         style={{
           x: reticleX,
           y: reticleY,
-          translateX: '-50%',
-          translateY: '-50%',
+          translateX: "-50%",
+          translateY: "-50%",
         }}
         initial={{ opacity: 0, scale: 0.7 }}
         animate={{
@@ -137,7 +137,7 @@ export function SignatureCursor() {
 
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-[9999] flex items-center justify-center mix-blend-difference"
-        style={{ x: coreX, y: coreY, translateX: '-50%', translateY: '-50%' }}
+        style={{ x: coreX, y: coreY, translateX: "-50%", translateY: "-50%" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: isVisible ? 1 : 0 }}
         transition={{ duration: 0.2 }}
@@ -146,11 +146,11 @@ export function SignatureCursor() {
           animate={{
             width: isHovering ? 64 : 8,
             height: isHovering ? 64 : 8,
-            borderRadius: isHovering ? '50%' : '2px',
+            borderRadius: isHovering ? "50%" : "2px",
             rotate: isHovering ? 0 : 45,
-            backgroundColor: 'rgba(255, 255, 255, 1)',
+            backgroundColor: "rgba(255, 255, 255, 1)",
           }}
-          transition={{ type: 'spring', stiffness: 400, damping: 28 }}
+          transition={{ type: "spring", stiffness: 400, damping: 28 }}
           className="relative flex items-center justify-center overflow-hidden"
         >
           <motion.div
@@ -162,7 +162,7 @@ export function SignatureCursor() {
             }}
             transition={{ duration: 0.25, delay: isHovering ? 0.05 : 0 }}
           >
-            {hoverType === 'link' ? (
+            {hoverType === "link" ? (
               <ArrowUpRight className="w-6 h-6 stroke-[2.5px]" />
             ) : (
               <MousePointer2 className="w-5 h-5 stroke-[2.5px]" />

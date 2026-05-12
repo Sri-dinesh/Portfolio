@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { ArrowUp } from 'lucide-react';
-import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
+import { useEffect, useState } from "react";
+import { ArrowUp } from "lucide-react";
+import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,13 +18,13 @@ const ScrollToTopButton = () => {
     const handleScroll = () => {
       setIsVisible(window.scrollY > 400);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -34,7 +34,7 @@ const ScrollToTopButton = () => {
           initial={{ opacity: 0, scale: 0.5, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.5, y: 20 }}
-          transition={{ duration: 0.3, ease: 'easeOut' }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
           className="fixed bottom-6 right-6 sm:bottom-10 sm:right-10 z-50"
         >
           <button

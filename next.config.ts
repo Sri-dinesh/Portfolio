@@ -4,7 +4,18 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     formats: ['image/avif', 'image/webp'],
-    remotePatterns: [],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.simpleicons.org",
+        pathname: "**",
+      },
+    ],
   },
   headers: async () => {
     return [

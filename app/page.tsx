@@ -5,18 +5,9 @@ import { HeroCard } from '@/components/client/HeroCard';
 import { TimelineSection } from '@/components/client/TimelineSection';
 import { ProjectList } from '@/components/client/ProjectList';
 
-export const metadata = {
-  title: 'S Sridinesh | Full-Stack Developer | React, Node.js, TypeScript',
-  description:
-    'S Sridinesh is a full-stack developer in Hyderabad specializing in React, Node.js, and TypeScript. Explore projects, skills, and experience.',
-  openGraph: {
-    title: 'S Sridinesh | Full-Stack Developer',
-    description:
-      'S Sridinesh is a full-stack developer specializing in React, Node.js, and TypeScript.',
-    type: 'website',
-    url: 'https://sridinesh-portfolio.vercel.app/',
-  },
-};
+import { generateMetadata as generateSeoMetadata } from "@/lib/seo";
+
+export const metadata = generateSeoMetadata();
 
 function BentoGrid() {
   return (

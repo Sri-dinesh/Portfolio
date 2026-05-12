@@ -1,9 +1,11 @@
 import Header from '@/components/client/Header';
+import { generateMetadata as generateSeoMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: 'Blog | S Sridinesh Portfolio',
-  description: 'Read articles about web development, React, and full-stack development.',
-};
+export const metadata = generateSeoMetadata(
+  "Blog",
+  "Read articles about web development, React, and full-stack development.",
+  "/blog"
+);
 
 export default function BlogPage() {
   return (

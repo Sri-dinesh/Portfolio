@@ -1,12 +1,16 @@
-'use client';
+"use client";
 
 import { motion } from "framer-motion";
 import { timelineData, TimelineItem } from "@/data/timeline";
 import { Briefcase, GraduationCap, Calendar, ChevronRight } from "lucide-react";
 
 export function TimelineSection() {
-  const experienceData = timelineData.filter((item) => item.type === "experience");
-  const educationData = timelineData.filter((item) => item.type === "education");
+  const experienceData = timelineData.filter(
+    (item) => item.type === "experience",
+  );
+  const educationData = timelineData.filter(
+    (item) => item.type === "education",
+  );
 
   return (
     <section className="relative py-8 sm:py-12 overflow-hidden" id="experience">
@@ -96,7 +100,6 @@ function TimelineCard({
       </div>
 
       <div className="relative p-5 rounded-xl bg-white/[0.02] backdrop-blur-sm border border-white/5 hover:bg-white/[0.04] hover:border-white/10 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_4px_20px_-10px_rgba(0,0,0,0.5)]">
-
         <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
         <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-3">

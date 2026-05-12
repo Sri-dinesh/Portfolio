@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Github, FileText, Linkedin } from 'lucide-react';
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Github, FileText, Linkedin } from "lucide-react";
 
 interface HeroCardProps {
   initials: string;
@@ -11,23 +12,23 @@ interface HeroCardProps {
 }
 
 export function HeroCard({ name, title }: HeroCardProps) {
-  const profileImage = 'https://avatars.githubusercontent.com/u/101187384?v=4';
+  const profileImage = "https://avatars.githubusercontent.com/u/101187384?v=4";
 
   const links = [
     {
-      href: 'https://drive.google.com/file/d/1fO-eTQ5husAEKMeuARSghLAoG-TQ913Y/view?usp=sharing',
+      href: "https://drive.google.com/file/d/1fO-eTQ5husAEKMeuARSghLAoG-TQ913Y/view?usp=sharing",
       icon: FileText,
-      label: 'Resume',
+      label: "Resume",
     },
     {
-      href: 'https://github.com/Sri-dinesh',
+      href: "https://github.com/Sri-dinesh",
       icon: Github,
-      label: 'GitHub',
+      label: "GitHub",
     },
     {
-      href: 'https://linkedin.com/in/sridinesh07',
+      href: "https://linkedin.com/in/sridinesh07",
       icon: Linkedin,
-      label: 'LinkedIn',
+      label: "LinkedIn",
     },
   ];
 
@@ -45,10 +46,13 @@ export function HeroCard({ name, title }: HeroCardProps) {
           transition={{ duration: 0.4 }}
         >
           <div className="w-full h-full rounded-full overflow-hidden relative border border-white/5">
-            <img
+            <Image
               src={profileImage}
               alt={name}
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              fill
+              className="object-cover transition-transform duration-700 hover:scale-105"
+              sizes="(max-width: 768px) 160px, 224px"
+              priority
             />
             <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.6)] rounded-full pointer-events-none" />
           </div>
