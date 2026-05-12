@@ -14,7 +14,7 @@ function BentoGrid() {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
       <section
         id="about"
-        className="col-span-1 sm:col-span-1 lg:col-span-4 row-span-2 scroll-mt-20"
+        className="col-span-1 sm:col-span-2 lg:col-span-4 row-span-2 scroll-mt-20"
         aria-labelledby="about-heading"
       >
         <h2 id="about-heading" className="sr-only">

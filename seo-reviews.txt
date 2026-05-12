@@ -1,0 +1,1561 @@
+REVIEW - 1
+""
+Check page
+You have 1of 3 checks left today
+
+Page URL
+https://sridinesh-portfolio.vercel.app/
+Crawl mode
+HTTP authentication: Username
+Username
+HTTP authentication: Password
+Password
+
+Checks
+
+Elements
+
+Miscellaneous
+On-page score
+Issues:
+2
+Critical
+70%
+On-page score
+Meta data
+95 %
+Page quality
+49 %
+Page structure
+90 %
+Links
+25 %
+Server
+83 %
+External factors
+3 %
+HTML page
+Himmelimherzen
+Meta title
+S Sridinesh | Full-Stack Developer | React, Node.js, TypeScript
+
+Meta description
+S Sridinesh is a full-stack developer in Hyderabad specializing in React, Node.js, and TypeScript. Explore projects, skills, and experience.
+
+URL
+https://sridinesh-portfolio.vercel.app/
+Status code
+200
+Page status
+Follow
+Index
+Language
+EN
+Response time
+0.03 sec
+File size
+71.10 kB
+Word count
+180
+To-Do List
+Tasks sorted by priority
+
+To-Do
+
+Importance
+
+Action
+This page has only very few internal links. If it's a welcome page, consider removing it.
+Error
+
+More details
+Try to reduce the number of used JavaScript files.
+Error
+
+More details
+Remove duplicate heading texts.
+Warning
+
+More details
+Add a favicon markup to the HTML code.
+Tip
+
+Go to tip
+light bulb icon
+Not sure how to complete these tasks?
+Our SEO software Seobility helps you fix these issues with clear, easy-to-understand reports for your entire website. Each report explains what an issue means, why it matters for SEO, and how to fix it.
+
+Learn more
+Checks
+Meta data
+95%
+Title
+
+Learn more
+3/3
+Very important
+S Sridinesh | Full-Stack Developer | React, Node.js, TypeScript
+The length of the page title is perfect. (562 pixels out of 580 max pixel length)
+There are no duplicate words in the title.
+light bulb icon
+Tip: Each page on your website should have a unique meta title
+This check only looks at the title of the checked URL, but if multiple pages on your website have the same title, it can still hurt your rankings. To find duplicate page titles on your website, you can use Seobility's Website Audit.
+
+Learn more
+Meta description
+
+Learn more
+2/2
+Very important
+S Sridinesh is a full-stack developer in Hyderabad specializing in React, Node.js, and TypeScript. Explore projects, skills, and experience.
+The length of the meta description is perfect. (845 pixels out of 1000 max pixel length)
+Crawlability
+
+Learn more
+1/1
+Very important
+There are no problems in accessing the page.
+Canonical link
+
+Learn more
+2/2
+Important
+https://sridinesh-portfolio.vercel.app/
+There is a valid canonical link specified.
+Language
+
+Learn more
+4/4
+Low importance
+Language detected in text: en
+Language defined in HTML: en
+Server location: Germany
+The following language is defined in the HTML code: en
+Alternate/hreflang links
+
+Learn more
+1/1
+Low importance
+There are no alternate links specified on this page.
+Other meta tags
+
+Learn more
+2/2
+Low importance
+There is no rel=next meta tag on this page.
+There is no rel=prev meta tag on this page.
+Domain
+
+Learn more
+Warning
+1/2
+Low importance
+This page is hosted on a subdomain. Use a top level domain for better SEO results.
+The domain name does not contain any non-Latin characters.
+Page URL
+
+Learn more
+3/3
+Low importance
+No parameters were found in the URL.
+No session ID was found in the URL.
+The URL does not have too many subdirectories.
+Charset encoding
+
+Learn more
+1/1
+Low importance
+The charset encoding (UTF-8) is set correctly.
+Doctype
+
+Learn more
+2/2
+Nice to have
+The doctype HTML 5 is set correctly.
+The doctype is placed first in the HTML code.
+Favicon
+
+Learn more
+Warning
+0/1
+Nice to have
+No favicon is linked in the HTML code.
+Page quality
+49%
+Content
+
+Learn more
+Errors
+6/8
+Very important
+There are only 180 words on this page. Use at least 250 words to provide useful information
+Only 2 paragraph/s was/were found on this page
+11.1% of the text are stop words.
+Keywords used in the page title are also used in the page content. That's good!
+The page contains a list, which indicates a good text structure.
+No placeholder texts or images were found.
+There are no duplicates on the site
+The average sentence length of 19 words is good.
+Frames
+
+Learn more
+1/1
+Very important
+This page does not use a frameset.
+Mobile optimization
+
+Learn more
+Warning
+1/3
+Low importance
+No Apple touch icon is specified
+This page loads 10 JavaScript files. This may affect the load time negatively
+A viewport (width=device-width, initial-scale=1) is provided.
+Strong and bold tags
+
+Learn more
+1/1
+Low importance
+The usage of strong and bold tags is perfect. We recommend the use of up to 6 tags for this page.
+Image SEO
+
+Learn more
+1/1
+Low importance
+ALT text (alternative text) is correctly used on all found images.
+Social media
+
+Learn more
+1/1
+Nice to have
+This page is optimized for sharing on social media.
+Additional markup
+
+Learn more
+1/1
+Nice to have
+No additional page markup was found.
+HTTPS
+
+Learn more
+2/2
+Low importance
+This page uses HTTPS to protect the privacy and integrity of information exchanged.
+All included files are also transferred via HTTPS.
+Others
+90%
+H1 heading
+
+Learn more
+Warning
+1/2
+Very important
+S Sridinesh
+The H1 heading is too short (11 characters). It should be at least 20 characters long.
+Headings
+
+Learn more
+Warning
+0/1
+Important
+There are duplicate heading texts on the page.
+Link structure
+25%
+Internal links
+
+Learn more
+Errors
+3/4
+Important
+This page seems to be an entry page, because only very few links were found
+Every link text is unique.
+None of the link texts are too long.
+There are no dynamic parameters used in internal links.
+External links
+
+Learn more
+1/1
+Nice to have
+There are 9 external links on this page.
+Server configuration
+83%
+HTTP redirects
+
+Learn more
+2/2
+Very important
+The checked page does not redirect to another URL.
+The redirect of URLs with www and non-www subdomain is configured correctly.
+HTTP header
+
+Learn more
+2/2
+Important
+No X-Powered HTTP header is sent.
+This page uses compression for data transfer.
+Performance
+
+Learn more
+Warning
+3/4
+Low importance
+This page loads 10 JavaScript files. This may affect the load time negatively
+The HTML page response time of 0,03 seconds is below the target of 0.40 seconds.
+This page only loads 1 CSS files. That's ok.
+The file size of the HTML document is fine. (71 kB)
+External factors
+3%
+Backlinks
+
+Learn more
+Warning
+0/4
+Very important
+This page has only a few links from other websites
+This page only has backlinks from 1 referring domains.
+This page only has 1 backlinks.
+This page only has backlinks from 1 different IP addresses
+""
+
+
+REVIEW - 2
+https://sridinesh-portfolio.vercel.app
+Your general SEO Checkup Score
+
+
+Download PDF
+SEO Score
+78/100
+Average SEO score of top 100 sites: 75%
+AI Visibility
+65/100
+AI visibility score reflects brand reach in AI
+Your site scored 78/100, just above the 75 average for top sites. We found 9 issues to fix, and they're what's holding you back from the top spots. And an AI Visibility Score of 65/100 means ChatGPT, Gemini and Perplexity mention your brand some of the time, with clear room to push further.
+
+9 Failed
+6 Warnings
+48 Passed
+Want to fix these issues and track your progress?
+Fix my SEO Issues
+Issues to fix
+HIGH
+To improve the website experience for your visitors, it is recommended to eliminate any render-blocking resources on this webpage.
+Details
+HIGH
+To ensure that Search Engines can accurately identify the topic of this webpage, it is important to include the most common keywords in the title tag, meta description, and heading tags.
+Details
+MEDIUM
+By creating a custom 404 error page with helpful links and information, users are more likely to stay on the site and continue to explore.
+Details
+MEDIUM
+Serve properly sized images to reduce page loading times and to improve user's experience.
+Details
+MEDIUM
+Add a Google Analytics script to this website to help in diagnosing potential SEO issues by monitoring site visitors and traffic sources.
+Details
+LOW
+Without an SPF record, spammers can easily spoof emails from this domain, potentially leading to compromised email security and deliverability issues.
+Details
+LOW
+Using more than 20 HTTP requests on a webpage can negatively impact the loading time.
+Details
+LOW
+This website either lacks a favicon or it has not been referenced properly.
+Details
+AI Content Insights
+Score:
+0
+Failed:
+0
+Warnings:
+0
+Passed:
+5
+Domain Business Context
+Understanding the business context of a domain can help you create content that is more relevant to your target audience and differentiate your website from competitors.
+What is this domain about
+Personal portfolio website showcasing a full-stack developer’s skills, projects, experience, and contact details.
+
+Industry Niche
+Developer Portfolio
+
+Target Audience
+Recruiters, potential employers, collaborators, and clients evaluating technical skills and project work.
+
+Content Strengths and Weaknesses
+This webpage is clear and easy to scan, with a straightforward portfolio structure that quickly surfaces skills, projects, experience, and contact options. Its main weakness is limited depth and credibility support, since most items are presented as brief summaries without supporting case studies, links, or detailed evidence.
+
+Content Strengths
+Clear Portfolio Structure
+Relevant Technical Stack
+Concrete Project Showcase
+Content Weaknesses
+Limited Project Detail
+Sparse Credibility Signals
+Minimal About Context
+Content Trust Score
+61%
+Topical Relevance
+95%
+Subject Expertise
+72%
+Credibility
+35%
+This webpage appears moderately trustworthy because it is highly relevant to a personal developer portfolio and includes concrete experience, education, and multiple contact links. Trust is limited by the absence of policy pages, an About page with fuller identity details, author-style attribution, testimonials, or external validation beyond social profiles.
+
+Content Freshness
+78%
+The page looks reasonably current because it includes recent education and work dates, including 2024 experience and an ongoing 2025–2028 degree timeline. It reads like an active personal portfolio rather than archived content, though there are no explicit publish or update timestamps on the main page.
+
+Positive Signals
+Recent 2024 experience dates
+Ongoing 2025–2028 education
+Active portfolio-style content
+Staleness Signals
+No explicit update timestamp
+No dated project entries
+Static footer-style content
+Content Opportunities
+The page has strong potential to convert a concise portfolio into a more persuasive professional showcase. The biggest opportunities are adding depth to projects and experience, strengthening proof of work, and improving trust signals that help recruiters and collaborators evaluate the candidate quickly.
+
+Quick Wins
+•
+Add one-sentence summaries under each project explaining the problem solved and the outcome.
+•
+Link every project title to a live demo or GitHub repository if available.
+•
+Rewrite the About section into a short professional bio with specialization and career goals.
+Common SEO issues
+Score:
+71
+Failed:
+4
+Warnings:
+2
+Passed:
+16
+Meta Title Test
+100% of top 100 sites passed
+This webpage is using a title tag with a length of 63 characters. While there's no target number of characters, titles should be descriptive and concise. We recommend using a title with a length between 20 - 60 characters in order to fit Google Search results that have a 600-pixel limit.
+Text: S Sridinesh | Full-Stack Developer | React, Node.js, TypeScript
+Length: 63 characters
+Meta Description Test
+92% of top 100 sites passed
+This webpage is using a meta description tag with a length of 140 characters. We recommend using well-written and inviting meta descriptions with a length between 150 and 220 characters (spaces included).
+Text: S Sridinesh is a full-stack developer in Hyderabad specializing in React, Node.js, and TypeScript. Explore projects, skills, and experience.
+Length: 140 characters
+Google Search Results Preview Test
+Desktop version
+Mobile version
+Social Media Meta Tags Test
+89% of top 100 sites passed
+This webpage is using social media meta tags.
+Open Graph Meta Tags
+og:title	S Sridinesh | Full-Stack Developer | React, Node.js, TypeScript
+og:description	S Sridinesh is a full-stack developer in Hyderabad specializing in React, Node.js, and TypeScript. Explore projects, skills, and experience.
+og:url	https://sridinesh-portfolio.vercel.app
+og:image	https://sridinesh-portfolio.vercel.app/og-image.png
+og:image:width	1200
+og:image:height	630
+og:image:alt	S Sridinesh Portfolio
+og:type	website
+Twitter Card Meta Tags
+twitter:card	summary_large_image
+twitter:creator	@srixdevv
+twitter:title	S Sridinesh | Full-Stack Developer | React, Node.js, TypeScript
+twitter:description	S Sridinesh is a full-stack developer in Hyderabad specializing in React, Node.js, and TypeScript. Explore projects, skills, and experience.
+twitter:image	https://sridinesh-portfolio.vercel.app/og-image.png
+Most Common Keywords Test
+There is likely no optimal keyword density (search engine algorithms have evolved beyond keyword density metrics as a significant ranking factor). It can be useful, however, to note which keywords appear most often on your page and if they reflect the intended topic of your page. More importantly, the keywords on your page should appear within natural sounding and grammatically correct copy.
+Keywords Usage Test
+48% of top 100 sites passed
+The most common keywords of this webpage are not distributed across the important HTML tags! Primary keywords should appear in title tag, meta description and heading tags to help Search Engines to properly identify the topic of this webpage.
+Keyword
+Title tag
+Meta description
+Headings
+react
+skills
+projects
+experience
+postgresql
+Keywords Cloud Test
+actsanalyzerapplicationbachelorblogbrowserbuildercdaccgpachatcognisketchcollegecompatibilitycomponentscomputercontactcontributedconvocrosscurrentdesigndesigneddesignerdeveloperdevelopingdevelopmentdiplomadockerdrawingeartheducationengagementengineeringensuringexperienceexpressfeedbackfigmafunctionalitygeminigithubgmailhellohyderabadimprovinginstagraminterniseajavajavascriptjunelinkedinmediamediummockingbirdmongodbmysqlnasanativenavigationnearnextjsnodenousverseobjectsplatformportalpostgresqlprojectprojectspythonreactresearchresponsiveresumesanthisridineshsarcasmsciencesecuritysendskillssocialsolutionssparkcvspeedsridineshstacktailwindtechnologiestechnologytrackertranslatortwitchtwynedtypescriptuserusingvardhaman
+Related Keywords Test
+Related Keywords
+See which keywords rank your URL in Google’s top 20
+Get key keyword metrics like average position, search volume, CPC, and more.
+
+Get Keyword Metrics
+
+Competitor Domains Test
+Related Keywords
+Understand your competitors' SEO and backlink profile
+Get related competitors and their domain authority score in relation to your domain.
+
+Get Competitor Info
+
+Heading Tags Test
+62% of top 100 sites passed
+This webpage contains headings tags.
+H1 tags
+S Sridinesh
+H2 tags
+About Me
+Full-Stack Developer
+Skills & Technologies
+Skills
+Projects
+Experience & Education
+Experience
+Education
+Contact
+SAY HELLO.
+Robots.txt Test
+99% of top 100 sites passed
+This website is using a robots.txt file.
+https://sridinesh-portfolio.vercel.app/robots.txt
+Sitemap Test
+83% of top 100 sites passed
+This website has a sitemap file.
+https://sridinesh-portfolio.vercel.app/sitemap.xml
+Image Alt Test
+78% of top 100 sites passed
+All "img" tags from this webpage have the required "alt" attribute.
+Responsive Image Test
+29% of top 100 sites passed
+Not all images in this webpage are properly sized! This webpage is serving images that are larger than needed for the size of the user's viewport.
+
+See results list
+
+How to fix
+Image Aspect Ratio Test
+75% of top 100 sites passed
+All image display dimensions match the natural aspect ratio.
+Deprecated HTML Tags Test
+94% of top 100 sites passed
+This webpage does not use HTML deprecated tags.
+Google Analytics Test
+72% of top 100 sites passed
+A Google Analytics script is not detected on this page. While there are several tools available to monitor your site's visitors and traffic sources, Google Analytics is a free, commonly recommended program to help diagnose potential SEO issues.
+
+How to fix
+Favicon Test
+100% of top 100 sites passed
+This website either doesn't have a favicon or this has not been referenced correctly!
+
+How to fix
+Backlinks Test
+Related Keywords
+Get a full and detailed list of your backlinks
+See every website linking to yours, along with detailed backlink data.
+
+Monitor your Backlinks
+
+JS Error Test
+83% of top 100 sites passed
+There are no severe JavaScript errors on this webpage.
+Console Errors Test
+27% of top 100 sites passed
+This webpage doesn't have any warnings or errors caught by the Chrome DevTools Console.
+Charset Declaration Test
+96% of top 100 sites passed
+This webpage has a character encoding declaration.
+Content-Type: text/html; charset=utf-8
+Speed optimizations
+Score:
+80
+Failed:
+2
+Warnings:
+3
+Passed:
+15
+HTML Page Size Test
+23% of top 100 sites passed
+The size of this webpage's HTML is 10.24 Kb and is under the average webpage's HTML size of 33 Kb. Faster loading websites result in a better user experience, higher conversion rates, and generally better search engine rankings.
+DOM Size Test
+56% of top 100 sites passed
+The Document Object Model (DOM) of this webpage has 421 nodes which is less than the recommended value of 1,500 nodes.
+HTML Compression/GZIP Test
+99% of top 100 sites passed
+This webpage is successfully compressed using br compression on your code. The HTML code is compressed from 75.59 Kb to 10.24 Kb (86% size savings). This helps ensure a faster loading webpage and improved user experience.
+Site Loading Speed Test
+71% of top 100 sites passed
+The loading time of this webpage (measured from N. Virginia, US) is around 2.24 seconds and this is under the average loading speed which is 5 seconds.
+Related Keywords
+Accurate historical loading speed monitor and reports
+Get detailed and accurate loading speed reports for your websites and see how your pages are being loaded over time.
+
+Monitor Loading Speed
+
+JS Execution Time Test
+53% of top 100 sites passed
+The JavaScript code used by this webpage is executed in less than 2 seconds.
+Page Objects Test
+7% of top 100 sites passed
+This webpage is using more than 20 http requests, which can slow down page loading and negatively impact user experience!
+Content size by content type
+Content type
+Percent
+Size
+javascript
+83.7 %
+224.43 Kb
+image
+10.0 %
+26.71 Kb
+html
+3.6 %
+9.52 Kb
+css
+2.7 %
+7.34 Kb
+font
+0.0 %
+0 B
+other
+0.0 %
+0 B
+TOTAL
+100%
+268.00 Kb
+Requests by content type
+Content type
+Percent
+Requests
+image
+59.3 %
+16
+javascript
+33.3 %
+9
+html
+3.7 %
+1
+css
+3.7 %
+1
+font
+0.0 %
+0
+other
+0.0 %
+0
+TOTAL
+100%
+27
+Content size by domain
+Domain
+Percent
+Size
+sridinesh-portfolio.vercel.app
+91.4 %
+244.83 Kb
+cdn.simpleicons.org
+8.6 %
+23.17 Kb
+TOTAL
+100%
+268.00 Kb
+Requests by domain
+Domain
+Percent
+Requests
+cdn.simpleicons.org
+55.6 %
+15
+sridinesh-portfolio.vercel.app
+44.4 %
+12
+TOTAL
+100%
+27
+CDN Usage Test
+95% of top 100 sites passed
+This webpage is not serving all resources (images, javascript and css) from CDNs!
+
+See results list
+
+How to fix
+Modern Image Format Test
+43% of top 100 sites passed
+This webpage is using images in a modern format.
+Image Metadata Test
+72% of top 100 sites passed
+This webpage is not using images with large metadata.
+Image Caching Test
+95% of top 100 sites passed
+This website is using cache headers for images and the browsers will display these images from the cache.
+JavaScript Caching Test
+96% of top 100 sites passed
+This webpage is using cache headers for all JavaScript resources.
+CSS Caching Test
+98% of top 100 sites passed
+This webpage is using cache headers for all CSS resources.
+JavaScript Minification Test
+98% of top 100 sites passed
+All JavaScript files used by this webpage are minified.
+
+See results list
+CSS Minification Test
+100% of top 100 sites passed
+All CSS resources used by this webpage are minified.
+
+See results list
+Render Blocking Resources Test
+15% of top 100 sites passed
+This webpage is using render blocking resources! Eliminating render-blocking resources can help this webpage to load significantly faster and will improve the website experience for your visitors.
+
+See results list
+
+How to fix
+URL Redirects Test
+97% of top 100 sites passed
+This URL doesn't have any redirects (which could potentially cause site indexation issues and site loading delays).
+Time To First Byte Test
+99% of top 100 sites passed
+The Time To First Byte value of this webpage is 0.001 seconds. To provide a good user experience, Google recommends that sites should strive to have a TTFB of 0.8 seconds or less.
+0.001 s0.8 s1.8 s
+First Contentful Paint Test
+90% of top 100 sites passed
+The First Contentful Paint value of this webpage is 2.736 seconds. To provide a good user experience, Google recommends that sites should strive to have a First Contentful Paint value of 1.8 seconds or less.
+2.736 s1.8 s3 s
+
+How to fix
+Largest Contentful Paint Test
+77% of top 100 sites passed
+The Largest Contentful Paint duration of this webpage is 2.74 seconds. To provide a good user experience, Google recommends that sites should strive to have Largest Contentful Paint of 2.5 seconds or less.
+2.74 s2.5 s4 s
+Largest Contentful Paint element within the viewport:
+Text: Projects
+Html: <h2 class="text-xl font-semibold text-alabaster tracking-tigh...">
+
+How to fix
+Cumulative Layout Shift Test
+91% of top 100 sites passed
+The CLS score of this webpage is 0.0000. To provide a good user experience, Google recommends that sites should strive to have a CLS score of 0.1 or less.
+00.10.25
+Server and security
+Score:
+100
+Failed:
+1
+Warnings:
+0
+Passed:
+6
+URL Canonicalization Test
+93% of top 100 sites passed
+https://sridinesh-portfolio.vercel.app/ and https://www.sridinesh-portfolio.vercel.app/ resolve to the same URL.
+SSL Checker and HTTPS Test
+100% of top 100 sites passed
+This website is successfully using HTTPS, a secure communication protocol over the Internet.
+The certificate is not used before the activation date.
+The certificate has not expired.
+The hostname "sridinesh-portfolio.vercel.app" is correctly listed in the certificate.
+The certificate should be trusted by all major web browsers.
+The certificate was not revoked.
+The certificate was signed with a secure hash.
+Certificate Chain:
+Server certificate
+Common Name
+*.vercel.app
+Subject Alternative Names
+*.vercel.app, vercel.app
+Not Valid Before
+Tue, April 28, 2026 at 7:34:43 AM GMT+5:30
+Not Valid After
+Mon, July 27, 2026 at 7:34:42 AM GMT+5:30
+Signature Algorithm
+sha256WithRsaEncryption
+Issuer
+WR1
+Root certificate
+Common Name
+WR1
+Organization
+Google Trust Services
+Location
+US
+Not Valid Before
+Wed, December 13, 2023 at 2:30:00 PM GMT+5:30
+Not Valid After
+Tue, February 20, 2029 at 7:30:00 PM GMT+5:30
+Signature Algorithm
+sha256WithRsaEncryption
+Issuer
+GTS Root R1
+Mixed Content Test (HTTP over HTTPS)
+100% of top 100 sites passed
+This webpage does not use mixed content - both the initial HTML and all other resources are loaded over HTTPS.
+HTTP2 Test
+99% of top 100 sites passed
+This webpage is using the HTTP/2 protocol.
+HSTS Test
+84% of top 100 sites passed
+This webpage is using the Strict-Transport-Security header.
+strict-transport-security:max-age=63072000; includesubdomains; preload
+Plaintext Emails Test
+97% of top 100 sites passed
+We've found 1 email addresses in your page code! We advise you to protect email links in a way that hides them from the spam harvesters.
+
+How to fix
+Unsafe Cross-Origin Links Test
+45% of top 100 sites passed
+This webpage is not using target="_blank" links without rel="noopener" or rel="noreferrer" attribute.
+Mobile usability
+Score:
+100
+Failed:
+0
+Warnings:
+0
+Passed:
+3
+Meta Viewport Test
+92% of top 100 sites passed
+This webpage is using a viewport meta tag.
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+Media Query Responsive Test
+98% of top 100 sites passed
+This webpage is using CSS media queries, which is the base for responsive design functionalities.
+Mobile Snapshot Test
+Mobile view
+Advanced SEO
+Score:
+60
+Failed:
+2
+Warnings:
+1
+Passed:
+6
+Structured Data Test
+66% of top 100 sites passed
+This webpage is using structured data.
+
+See results list
+Custom 404 Error Page Test
+80% of top 100 sites passed
+This website is not using a custom 404 error page! Default 404 error pages result in a poor experience - it can mislead users into thinking an entire site is down or broken, greatly increases the chance they leave the website entirely, and looks unprofessional. We recommend to have a custom 404 error page in order to improve the website's user experience by letting users know that only a specific page is missing/broken (and not the entire site), providing them helpful links, the opportunity to report bugs, and potentially track the source of broken links.
+
+How to fix
+Noindex Tag Test
+99% of top 100 sites passed
+This webpage does not use the noindex meta tag. This means that it can be indexed by search engines.
+Canonical Tag Test
+93% of top 100 sites passed
+This webpage is using the canonical link tag. This tag specifies that the URL: https://sridinesh-portfolio.vercel.app/ is preferred to be used in search results. Please ensure that this specification is correct, as canonical tags are often hard-coded and may not always reflect the latest changes in a site's URL structure.
+<link href="https://sridinesh-portfolio.vercel.app" rel="canonical"/>
+Nofollow Tag Test
+This webpage does not use the nofollow meta tag. This means that search engines will crawl all links from this webpage.
+Disallow Directive Test
+The robots.txt file does not use the disallow directive. This means that the whole website can be crawled by search engines.
+Meta Refresh Test
+98% of top 100 sites passed
+This webpage is not using a meta refresh tag.
+SPF Records Test
+94% of top 100 sites passed
+This DNS server is not using an SPF record! SPF (Sender Policy Framework) allows administrators to specify which hosts are allowed to send mail from a given domain by creating a specific SPF record or TXT record in the Domain Name System (DNS). You can find more information about SPF records here.
+
+How to fix
+Ads.txt Validation Test
+67% of top 100 sites passed
+This website doesn't use an ads.txt file! Ads.txt is a text file that contains a list of Authorized Digital Sellers. The purpose of ads.txt files is to give advertisers and advertising networks the ability to verify who is allowed to sell advertising on your website.
+SEO Report forhttps://sridinesh-portfolio.vercel.app
+Your general SEO Checkup Score
+
+
+Download PDF
+SEO Score
+78/100
+Average SEO score of top 100 sites: 75%
+AI Visibility
+65/100
+AI visibility score reflects brand reach in AI
+Your site scored 78/100, just above the 75 average for top sites. We found 9 issues to fix, and they're what's holding you back from the top spots. And an AI Visibility Score of 65/100 means ChatGPT, Gemini and Perplexity mention your brand some of the time, with clear room to push further.
+
+9 Failed
+6 Warnings
+48 Passed
+
+Dominate search on Google and AI Engines.
+Join 85,000+ SaaS & e-commerce teams already winning search.
+
+Start for Free
+General
+9
+6
+48
+AI Content Insights
+0
+0
+5
+Common SEO issues
+4
+2
+16
+Speed optimizations
+2
+3
+15
+Server and security
+1
+0
+6
+Mobile usability
+0
+0
+3
+Advanced SEO
+2
+1
+6
+
+
+REVIEW - 3
+""
+Audit Results for sridinesh-portfolio.vercel.app
+Your page could be better
+
+
+On-Page SEO
+
+GEO
+
+Links
+
+Usability
+
+Performance
+
+Report Generated: 12 May 1:46PM UTC
+
+Improve Your Site With Our DIY SEO Tool
+Review unlimited pages. Crawl your whole site for problems and get clear, easy to follow recommendations with guides for your CMS. Monitor your keyword rankings and get regular updates on your site's performance.
+
+Helping Business Owners promote their websites the affordable way.
+
+
+Recommendations
+Execute a Link Building Strategy
+Links
+High Priority
+Reduce length of Title Tag
+On-Page SEO
+Medium Priority
+Increase Page Text Content
+On-Page SEO
+Low Priority
+Make use of HTTP/2+ Protocol
+Performance
+Low Priority
+Optimize for Mobile PageSpeed Insights
+Usability
+Low Priority
+Add a DMARC Mail Record
+Technology
+Low Priority
+Add an SPF Mail Record
+Technology
+Low Priority
+Implement an Analytics Tracking Tool
+On-Page SEO
+Low Priority
+Add a Favicon
+Usability
+Low Priority
+Add Business Address and Phone Number
+Local SEO
+Low Priority
+Add Local Business Schema
+Local SEO
+Low Priority
+Create and link your Facebook Page
+Social
+Low Priority
+Create and link an associated YouTube Channel
+Social
+Low Priority
+Install a Facebook Pixel
+Social
+Low Priority
+Remove Inline Styles
+Performance
+Low Priority
+Resolve JavaScript errors
+Performance
+Low Priority
+Remove Clear Text Email Addresses
+Usability
+Low Priority
+Implement a llms.txt File
+GEO
+Low Priority
+On-Page SEO Results
+Your On-Page SEO is very good!
+Congratulations, your On-Page SEO is well optimized. On-Page SEO is important to ensure Search Engines can understand your content appropriately and help it rank for relevant keywords. You can continue to build on your strong position through testing content improvements for gradual gains.
+Title Tag
+You have a Title Tag, but ideally it should be shortened to between 50 and 60 characters (including spaces).
+S Sridinesh | Full-Stack Developer | React, Node.js, TypeScript
+Length : 63
+Title Tags are very important for search engines to correctly understand and categorize your content.
+Meta Description Tag
+Your page has a Meta Description of optimal length (between 120 and 160 characters).
+S Sridinesh is a full-stack developer in Hyderabad specializing in React, Node.js, and TypeScript. Explore projects, skills, and experience.
+Length : 140
+SERP Snippet Preview
+This illustrates how your page may appear in Search Results. Note, this is intended as a guide and Search Engines are more frequently generating this content dynamically.
+
+S Sridinesh
+https://sridinesh-portfolio.vercel.app
+S Sridinesh
+S Sridinesh is a full-stack developer in Hyderabad specializing in React, Node.js, and TypeScript. Explore projects, skills, and experience.
+Hreflang Usage
+Your page is not making use of Hreflang attributes.
+Language
+Your page is using the Lang Attribute.
+Declared: English
+H1 Header Tag Usage
+Your page has a H1 Tag.
+H2-H6 Header Tag Usage
+Your page is making use multiple levels of Header Tags.
+Header Tag	Frequency	
+H2	11	
+H3	10	
+H4	0	
+H5	0	
+H6	0	
+Keyword Consistency
+Your page's main keywords are distributed well across the important HTML Tags.
+Individual Keywords
+Keyword	Title	Meta Description Tag	Headings Tags	Page Frequency	
+react	
+8	
+skills	
+3	
+projects	
+3	
+experience	
+3	
+nextjs	
+3	
+postgresql	
+3	
+figma	
+3	
+api	
+3	
+Phrases
+Phrase	Title	Meta Description Tag	Headings Tags	Page Frequency	
+computer science	
+3	
+tailwind css	
+2	
+nextjs react	
+2	
+react postgresql	
+2	
+gemini api	
+2	
+cgpa 88	
+2	
+nextjs react postgresql	
+2	
+Amount of Content
+Your page has a low volume of text content which search engines can interpret as 'thin content'.
+Word Count: 216
+It has been well researched that higher text content volumes are related to better ranking ability in general.
+Image Alt Attributes
+You do not have any images missing Alt Attributes on your page.
+Canonical Tag
+Your page is using the Canonical Tag.
+https://sridinesh-portfolio.vercel.app
+Noindex Tag Test
+Your page is not using the Noindex Tag which prevents indexing.
+Noindex Header Test
+Your page is not using the Noindex Header which prevents indexing.
+SSL Enabled
+Your website has SSL enabled.
+HTTPS Redirect
+Your page successfully redirects to a HTTPS (SSL secure) version.
+Robots.txt
+Your website appears to have a robots.txt file.
+http://sridinesh-portfolio.vercel.app/robots.txt
+Blocked by Robots.txt
+Your page does not appear to be blocked by robots.txt.
+XML Sitemaps
+Your website appears to have an XML Sitemap.
+https://sridinesh-portfolio.vercel.app/sitemap.xml
+Analytics
+We could not detect an analytics tool installed on your page.
+Website analytics tools like Google Analytics assist you in measuring, analyzing and ultimately improving traffic to your page.
+Schema.org Structured Data
+You are using JSON-LD Schema on your page.
+Generative Engine Optimization (GEO)
+Your Generative Engine Optimization could be better
+Your page has some level positioning for Generative Engine Optimization (GEO). GEO is important to ensure LLMs and AI Search Engines can effectively crawl your content and understand the underlying entity structure. Consider additional enhancements to improve visibility in LLMs as this is becoming a rapidly growing traffic source.
+Identity SchemaNew
+Organization or Person Schema identified on the page.
+Person
+Rendered Content (LLM Readability)New
+Your page has a low level of rendered content which tends to make it more readable for LLMs.
+Rendering Percentage: 0%
+Llms.txtNew
+We have not detected or been able to retrieve a llms.txt file successfully.
+Rankings
+Top Organic Keyword Rankings
+You can see the live Keyword Rankings for your page within the report by signing up to one of our premium plans.
+Links
+Backlink Summary
+You have a reasonably weak level of backlink activity to this page.
+Search Engines use backlinks as a strong indicator of a page's authority, relevance and ranking potential. There are various strategies available to gain links to a page to improve this factor
+Domain
+Strength
+
+Page
+Strength
+
+0
+Total Backlinks
+0
+Referring Domains
+0
+Nofollow Backlinks
+0
+Dofollow Backlinks
+0
+Edu Backlinks
+0
+Gov Backlinks
+0
+IPs
+0
+Subnets
+Top Backlinks
+We haven't found any backlinks to report for this site.
+Top Pages by Backlinks
+We haven't found any Top Pages data for this site.
+Top Anchors by Backlinks
+We haven't found any Anchor Text data for this site.
+Top Referring Domain Geographies
+We haven't found any Geographic Data for this site.
+On-Page Link Structure
+We found 10 total links. 90% of your links are external links and are sending authority to other sites. 0% of your links are nofollow links, meaning authority is not being passed to those destination pages.
+On-Page Links
+10
+Total
+Internal Links
+1
+External Links: Follow
+9
+External Links: Nofollow
+0
+Friendly Links
+Your link URLs appear friendly (easily human or search engine readable).
+
+Create White Label PDFs
+Upload your own logo and company's contact details. Generate unlimited PDFs under our White Label plans. See an example PDF Report
+
+Embed the Audit Tool into your website. Get notified of leads straight from your website.
+
+
+Usability
+Your usability could be better
+Your page is OK but could be more usable across devices. Usability is important to maximize your available audience and minimize user bounce rates (which can indirectly affect your search engine rankings).
+Device Rendering
+This check visually demonstrates how your page renders on different devices. It is important that your page is optimized for mobile and tablet experiences as today the majority of web traffic comes from these sources.
+Google's Core Web Vitals
+Google is indicating that they do not have 'sufficient real-world speed data for this page' in order to make a Core Web Vitals assessment. This can occur for smaller websites or those that are not crawl-able by Google.
+Use of Mobile Viewports
+Your page specifies a Viewport matching the device's size, allowing it to render appropriately across devices.
+Google's PageSpeed Insights - Mobile
+Google is indicating that your page is scoring poorly on their Mobile PageSpeed Insights evaluation.
+
+Note that this evaluation is being performed from US servers and the results may differ slightly from an evaluation carried out from Google's PageSpeed Web Interface as that reporting localizes to the region in which you are running the report.
+Google has indicated that the performance of a webpage is becoming more important from a user and subsequently ranking perspective.
+Lab Data	Value
+First Contentful Paint	2 s
+Speed Index	4.6 s
+Largest Contentful Paint	3 s
+Time to Interactive	3.8 s
+Total Blocking Time	0.46 s
+Cumulative Layout Shift	0
+Opportunities	Estimated Savings
+Avoid multiple page redirects	0.63 s
+Google's PageSpeed Insights - Desktop
+Google is indicating that your page is scoring well on their Desktop PageSpeed Insights evaluation.
+Lab Data	Value
+First Contentful Paint	0.4 s
+Speed Index	0.8 s
+Largest Contentful Paint	0.8 s
+Time to Interactive	0.8 s
+Total Blocking Time	0 s
+Cumulative Layout Shift	0
+Opportunities	Estimated Savings
+Avoid multiple page redirects	0.19 s
+Flash Used?
+No Flash content has been identified on your page.
+iFrames Used?
+There are no iFrames detected on your page.
+Favicon
+We have not identified a Favicon on your page.
+Favicons are a way to increase brand visibility and make your page more recognizable when browsing amongst multiple browser tabs or bookmarks.
+Email Privacy
+Email addresses have been found in plain text.
+We recommend removing any plain text email addresses and replacing them with images or contact forms. Plain text email addresses can be susceptible to scrapers and email spammers.
+Legible Font Sizes
+The text on your page appears to be legible across devices.
+Tap Target Sizing
+The links and buttons on your page appear to be appropriately sized for a user to easily tap on a touchscreen.
+Performance Results
+Your performance could be better
+Your page's performance has some issues and room for improvement. Performance is important to ensure a good user experience, and reduced bounce rates (which can also indirectly affect your search engine rankings). We recommend addressing the highlighted factors below.
+Website Load Speed
+Your page loads in a reasonable amount of time.
+Server Response
+0.0s
+All Page Content Loaded
+2.2s
+All Page Scripts Complete
+2.1s
+Website Download Size
+Your page's file size is reasonably low which is good for Page Load Speed and user experience.
+Download Page Size
+0.26MB
+Download Page Size Breakdown
+0.26MB
+Total
+HTML
+0.01MB
+CSS
+0.01MB
+JS
+0.22MB
+Images
+0.02MB
+Other
+0MB
+Compression Usage (Gzip, Deflate, Brotli)
+Your website appears to be using a reasonable level of compression.
+Compression Rate
+69%
+Compression Rates
+HTML
+87% compressed of 0.07MB
+CSS
+79% compressed of 0.03MB
+JS
+69% compressed of 0.71MB
+Images
+4% compressed of 0.02MB
+Other
+0% compressed of 0.00MB
+Total
+69% compressed of 0.84MB
+Resources Breakdown
+This check displays the total number of files that need to be retrieved from web servers to load your page.
+28
+
+Total Objects
+
+1
+
+Number of HTML Pages
+
+9
+
+Number of JS Resources
+
+1
+
+Number of CSS Resources
+
+15
+
+Number of Images
+
+2
+
+Other Resources
+
+Google Accelerated Mobile Pages (AMP)
+This page does not appear to have AMP Enabled.
+JavaScript Errors
+Your page is reporting JavaScript errors during load.
+This could indicate that some required functionality on your page is failing or scripts may have coding problems.
+HTTP2 Usage
+Your website is using an outdated HTTP Protocol.
+We recommend enabling HTTP/2+ Protocol for your website as it can significantly improve page load speed for users.
+Optimize Images
+All of the images on your page appear to be optimized.
+Minification
+All your JavaScript and CSS files appear to be minified.
+Deprecated HTML
+No deprecated HTML tags have been found within your page.
+Inline Styles
+Your page appears to be using Inline Styles.
+Inline Styles are an older coding practice and discouraged in favor of using CSS style sheets, due to their ability to degrade page load performance and unnecessarily complicate HTML Code.
+Social Results
+Facebook Page Linked
+No associated Facebook Page found as a link on your page.
+Facebook Open Graph Tags
+Your page is using Facebook Open Graph Tags.
+Facebook Pixel
+We have not detected a Facebook Pixel on your page.
+Facebook's Pixel is a useful piece of analytics code that allows you to retarget visitors if you decide to run Facebook Ads in future.
+X (formerly Twitter) Account Linked
+Your page has a link to a X Profile.
+	https://x.com/srixdevv
+X Cards
+Your page is using X Cards.
+Instagram Linked
+Your page has a link to an Instagram Profile.
+	https://instagram.com/atomic_coding
+LinkedIn Page Linked
+Your page has a link to a LinkedIn Profile.
+	https://linkedin.com/in/sridinesh07
+YouTube Channel Linked
+No associated YouTube Channel found linked on your page.
+YouTube Channel Activity
+No associated YouTube Channel found linked on your page.
+Want to grow your YouTube Channel? Try our  
+YouTube SEO Tool
+Local SEO
+Address & Phone Shown on Website
+We can't identify one or both of these components on the page. Missing: Address
+Phone	+91 99498 87000
+Local Business Schema
+No Local Business Schema identified on the page.
+Google Business Profile Identified
+You can see information about your page's Google Business Profile within this report by signing up to one of our premium plans.
+Want to improve your Local Search Presence? Try our  
+Local SEO Tool
+Technology Results
+Technology List
+These software or coding libraries have been identified on your page.
+Technology	Version
+	Vercel	
+Server IP Address
+216.198.79.3
+DNS Servers
+ns-tld4.charlestonroadregistry.com
+ns-tld3.charlestonroadregistry.com
+ns-tld2.charlestonroadregistry.com
+ns-tld1.charlestonroadregistry.com
+ns-tld5.charlestonroadregistry.com
+Web Server
+Vercel
+Charset
+text/html; charset=utf-8
+DMARC Record
+This site does not appear to have a DMARC record in place.
+DMARC records are important to improve email deliverability and combat spoofing.
+SPF Record
+This site does not appear to have an SPF record.
+SPF records are important to improve email deliverability and combat spoofing.
+Review Child Pages
+Page
+/blog
+""
+
+
+REVIEW - 4 
+Analysis of https://sridinesh-portfolio.vercel.app/ paused
+1  /  500 URLs
+You have to be signed in. Registration is free.
+
+Sign up to continue
+
+Check the first page results
+0 Errors 0 Urgent Warnings 0 Warnings 13 Free of errors
+Title
+Title is looking good
+Title tag is not placed more than once in <head>
+?Duplicate titles
+Sign in FREE to crawl more pages and find duplicate titles
+Sign In
+S Sridinesh | Full-Stack Developer | React, Node.js, TypeScript
+Pixel Length
+559
+max. 600px
+Characters
+63
+Headings
+H1 is looking good
+<H2> About Me
+<H1> S Sridinesh
+<H2> Full-Stack Developer
+<H2> Skills & Technologies
+<H2> Skills
+<H2> Projects
+<H2> Projects
+<H3> SparkCV - AI Resume Builder
+<H3> CogniSketch - AI Drawing Analyzer
+<H3> Twyned - Social Media App
+<H3> Convo - Chat Application
+<H3> NEO Earth Tracker - Near Earth Objects
+<H3> MockingBird - Sarcasm Translator
+<H2> Experience & Education
+<H2> Experience
+<H3> UI/UX Designer
+<H3> Project Intern
+<H2> Education
+<H3> Bachelor of Technology
+<H3> Diploma in Computer Science Engineering
+<H2> Contact
+<H2> SAY HELLO.
+H1 Headings
+1
+All Headings
+22
+Web issues
+?
+Redirect issues
+Sign in to find all redirect issues
+Sign In
+?
+Duplicate pages
+Sign in to find all duplicate pages
+Sign In
+?
+Broken pages (404, 500,..)
+Sign in to find all broken pages
+Sign In
+Meta description
+Meta description length is OK
+Meta description is not placed more than once in <head>
+S Sridinesh is a full-stack developer in Hyderabad specializing in React, Node.js, and TypeScript. Explore projects, skills, and experience.
+Pixel Length
+891
+Characters
+140
+Images
+ALT text of images is set correctly
+S Sridinesh
+S Sridinesh
+Java
+Java
+Python
+Python
+JavaScript
+JavaScript
+TypeScript
+TypeScript
+React
+React
+Next.js
+Next.js
+Node.js
+Node.js
+Express
+Express
+PostgreSQL
+PostgreSQL
+MongoDB
+MongoDB
+MySQL
+MySQL
+Docker
+Docker
+Git
+Git
+Tailwind CSS
+Tailwind CSS
+Figma
+Figma
+Links on the page
+Internal linking of your page looks good
+All links
+10
+Internal
+1
+(0 nofollow)
+External
+9
+(0 nofollow)
+URL	ANCHOR TEXT	EXTERNAL	FOLLOW
+https://drive.google.com/file/d/1fO-eTQ5husAEKM...	(empty)	Yes	Yes
+https://medium.com/@sridineshS	MEDIUM	Yes	Yes
+https://www.instagram.com/atomic_coding/	INSTAGRAM	Yes	Yes
+https://x.com/srixdevv	X	Yes	Yes
+https://linkedin.com/in/sridinesh07	LINKEDIN	Yes	Yes
+https://sridinesh-portfolio.vercel.app/blog	Blog	No	Yes
+https://github.com/Sri-dinesh	GITHUB	Yes	Yes
+https://github.com/Sri-dinesh	(empty)	Yes	Yes
+https://twitch.tv/sridinesh	TWITCH	Yes	Yes
+https://linkedin.com/in/sridinesh07	(empty)	Yes	Yes
+Url and protocol
+Redirections of URL variations
+Variation	Status	Status code
+With WWW	Wrong code of the redirection
+307
+
+HTTP	Wrong code of the redirection
+308
+
+The URL doesn’t contain an underscore symbol
+A null page returns code 404
+Page is running on secure HTTPS protocol
+Indexation & Crawling
+Crawling is allowed by robots.txt
+Page can be indexed
+Links on the page can be followed
+SEARCH ENGINE	CRAWLING	INDEXATION	FOLLOW LINKS
+general	Allowed	Allowed	Follow
+yandex	Allowed	Allowed	Follow
+baiduspider	Allowed	Allowed	Follow
+bingbot	Allowed	Allowed	Follow
+googlebot	Allowed	Allowed	Follow
+seznambot	Allowed	Allowed	Follow
+Page speed
+ Largest Contentful Paint (LCP) 	Unavailable
+ First Input Delay (FID) 	Unavailable
+ Cumulative Layout Shift (CLS) 	Unavailable
+How to optimize your web page and make it faster? 
+Show the details
+logo GoogleResults are provided bylogo GooglePageSpeed Insights
+
+mockup
+Mobile-friendly test
+Internal error when running this test. Please try running the test again.
+Results are provided by logo Google Mobile-Friendly Test
+
+Further information
+Page and domain authority provided by MOZ
+Page Authority
+/100
+Domain Authority
+/100
+Canonical: Web page has canonical to https://sridinesh-portfolio.vercel.app
+Canonical URL	Status code	Title	H1	Meta desc.	Body content	Indexed by google
+https://sridinesh-portfolio.vercel.app	
+200
+
+The same	The same	The same	The same	
+Check it
+Web page doesn't exist in another languages
+There is no pagination on the web page
+Structured data preview
+Show in Google's testing tool
+HTTPS headers
+date	Tue, 12 May 2026 13:50:43 GMT
+server	Vercel
+x-nextjs-prerender	1
+transfer-encoding	chunked
+vary	rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+x-frame-options	SAMEORIGIN
+x-matched-path	/
+strict-transport-security	max-age=63072000; includeSubDomains; preload
+access-control-allow-origin	*
+content-disposition	inline
+x-content-type-options	nosniff
+x-xss-protection	1; mode=block
+x-vercel-cache	HIT
+x-nextjs-stale-time	300
+x-vercel-id	fra1::xlqsp-1778593842864-7439941b3794
+content-type	text/html; charset=utf-8
+etag	W/"caa993e52eed56c4aa2f4bdfd2eac3dd"
+cache-control	public, max-age=0, must-revalidate
+age	24295

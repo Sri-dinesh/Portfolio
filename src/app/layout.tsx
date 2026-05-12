@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     site: "@srixdevv",
     creator: "@srixdevv",
   },
+  icons: {
+    icon: "/images/projects/cat.webp",
+  },
   robots: {
     index: true,
     follow: true,
