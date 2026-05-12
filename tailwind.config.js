@@ -47,6 +47,7 @@ export default {
           "Arial",
           "sans-serif",
         ],
+        mono: ["var(--font-geist-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
       },
       spacing: {
         18: "4.5rem",
