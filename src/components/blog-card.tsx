@@ -1,3 +1,5 @@
+"use client";
+
 import { ScrollText, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -24,7 +26,9 @@ export function BlogCard({ title, description, date, link }: BlogCardProps) {
           <ScrollText className="w-5 h-5 text-white/70 group-hover:text-white transition-colors duration-300" />
         </div>
         <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/5">
-          <span className="text-[10px] font-medium text-white/40 uppercase tracking-widest">{date}</span>
+          <span className="text-[10px] font-medium text-white/40 uppercase tracking-widest">
+            {date}
+          </span>
         </div>
       </div>
 
@@ -39,7 +43,9 @@ export function BlogCard({ title, description, date, link }: BlogCardProps) {
       </div>
 
       <div className="mt-6 pt-6 border-t border-white/5 flex items-center justify-between">
-        <span className="text-xs font-medium text-white/30 group-hover:text-white/60 transition-colors duration-300">Read on Medium</span>
+        <span className="text-xs font-medium text-white/30 group-hover:text-white/60 transition-colors duration-300">
+          Read on Medium
+        </span>
       </div>
     </motion.a>
   );

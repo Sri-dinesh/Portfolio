@@ -1,3 +1,6 @@
+"use client";
+
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Github, FileText, Linkedin } from "lucide-react";
 
@@ -43,10 +46,13 @@ export function HeroCard({ name, title }: HeroCardProps) {
           transition={{ duration: 0.4 }}
         >
           <div className="w-full h-full rounded-full overflow-hidden relative border border-white/5">
-            <img
+            <Image
               src={profileImage}
               alt={name}
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              fill
+              className="object-cover transition-transform duration-700 hover:scale-105"
+              sizes="(max-width: 768px) 160px, 224px"
+              priority
             />
             <div className="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.6)] rounded-full pointer-events-none" />
           </div>

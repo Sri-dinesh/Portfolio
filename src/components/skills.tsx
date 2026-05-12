@@ -1,3 +1,6 @@
+"use client";
+
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Code2 } from "lucide-react";
 
@@ -69,15 +72,15 @@ function SkillBadge({
       }}
       className="group flex items-center gap-2 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg bg-white/[0.03] border border-white/[0.04] hover:bg-white/[0.06] hover:border-emerald-500/20 hover:shadow-[0_2px_10px_-4px_rgba(52,211,153,0.15)] transition-all duration-300"
     >
-      <img
+      <Image
         src={skill.icon}
         alt={`${skill.name}`}
         width={15}
         height={15}
         className="w-[14px] h-[14px] sm:w-[15px] sm:h-[15px] opacity-60 group-hover:opacity-100 transition-opacity duration-300 filter group-hover:brightness-125 select-none pointer-events-none"
-        loading="lazy"
         draggable={false}
         aria-hidden="true"
+        unoptimized={true}
       />
       <span className="text-xs sm:text-[13px] font-medium text-pearl/70 group-hover:text-alabaster transition-colors duration-300 tracking-wide select-none">
         {skill.name}

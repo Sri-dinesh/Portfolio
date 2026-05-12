@@ -1,8 +1,16 @@
+"use client";
+
+import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { projects, Project } from "../data/projects";
-import { ArrowUpRight, Github, ChevronDown, ExternalLink, Briefcase } from "lucide-react";
-import { cn } from "../lib/utils";
+import { projects, Project } from "@/constants/projects";
+import {
+  ArrowUpRight,
+  Github,
+  ChevronDown,
+  Briefcase,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export function ProjectList() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
@@ -48,7 +56,9 @@ function ProjectRow({
   isExpanded: boolean;
   onToggle: () => void;
 }) {
-  const tags = project.language ? project.language.split(",").map((tag) => tag.trim()) : [];
+  const tags = project.language
+    ? project.language.split(",").map((tag) => tag.trim())
+    : [];
   const indexStr = (index + 1).toString().padStart(2, "0");
 
   return (
@@ -59,7 +69,7 @@ function ProjectRow({
       transition={{ delay: index * 0.05 }}
       className={cn(
         "group border-b border-white/5 last:border-0 transition-colors duration-300",
-        isExpanded ? "bg-white/[0.02]" : "hover:bg-white/[0.01]"
+        isExpanded ? "bg-white/[0.02]" : "hover:bg-white/[0.01]",
       )}
     >
       <button
@@ -95,7 +105,7 @@ function ProjectRow({
             "p-2 rounded-full border border-white/5 text-pearl/50 transition-all duration-300",
             isExpanded
               ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/20 rotate-180"
-              : "group-hover:bg-white/5 group-hover:text-alabaster"
+              : "group-hover:bg-white/5 group-hover:text-alabaster",
           )}
         >
           <ChevronDown className="w-4 h-4" />
@@ -114,10 +124,9 @@ function ProjectRow({
             <div
               className={cn(
                 "px-4 pb-8 sm:px-14 sm:pb-10 grid grid-cols-1 gap-8 items-start",
-                project.imageUrl && "lg:grid-cols-2"
+                project.imageUrl && "lg:grid-cols-2",
               )}
             >
-
               <div className="space-y-6">
                 {project.description && (
                   <p className="text-pearl/80 leading-relaxed font-light text-sm sm:text-base">
@@ -164,16 +173,17 @@ function ProjectRow({
                 </div>
               </div>
               {project.imageUrl && (
-                <div className="relative rounded-xl overflow-hidden border border-white/10 bg-charcoal/20 group/image">
+                <div className="relative aspect-video rounded-xl overflow-hidden border border-white/10 bg-charcoal/20 group/image">
                   <div className="absolute inset-0 bg-emerald-500/5 opacity-0 group-hover/image:opacity-100 transition-opacity z-10" />
-                  <img
+                  <Image
                     src={project.imageUrl}
                     alt={project.title || "Project Image"}
-                    className="w-full h-auto object-cover transform transition-transform duration-700 group-hover/image:scale-105"
+                    fill
+                    className="object-cover transform transition-transform duration-700 group-hover/image:scale-105"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               )}
-
             </div>
           </motion.div>
         )}

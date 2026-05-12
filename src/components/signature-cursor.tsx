@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 import { ArrowUpRight, MousePointer2 } from "lucide-react";
@@ -8,6 +10,8 @@ export function SignatureCursor() {
   const [hoverType, setHoverType] = useState<"default" | "link" | "button">(
     "default",
   );
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const mouseX = useMotionValue(-100);
   const mouseY = useMotionValue(-100);
@@ -21,8 +25,6 @@ export function SignatureCursor() {
   const reticleY = useSpring(mouseY, reticleSpring);
 
   const isTouchOnlyDevice = (): boolean => {
-    if (typeof window === "undefined") return false;
-
     const touchPoints = navigator.maxTouchPoints ?? 0;
     const hasTouchEvent = "ontouchstart" in window;
     const supportsFinePointer =
@@ -37,7 +39,12 @@ export function SignatureCursor() {
   };
 
   useEffect(() => {
-    if (isTouchOnlyDevice()) {
+    setMounted(true);
+    setIsTouchDevice(isTouchOnlyDevice());
+  }, []);
+
+  useEffect(() => {
+    if (!mounted || isTouchDevice) {
       return;
     }
 
@@ -60,7 +67,7 @@ export function SignatureCursor() {
       };
 
       const clickableEl =
-        (target.closest("a, button, [role='button']") as HTMLElement) || target;
+        (target.closest('a, button, [role="button"]') as HTMLElement) || target;
 
       if (isClickable(clickableEl)) {
         setIsHovering(true);
@@ -84,7 +91,7 @@ export function SignatureCursor() {
 
     const style = document.createElement("style");
     style.id = "signature-cursor-style";
-    style.innerHTML = `* { cursor: none !important; }`;
+    style.textContent = "* { cursor: none !important; }";
     document.head.appendChild(style);
 
     return () => {
@@ -94,9 +101,9 @@ export function SignatureCursor() {
       const existingStyle = document.getElementById("signature-cursor-style");
       if (existingStyle) existingStyle.remove();
     };
-  }, [mouseX, mouseY, isVisible]);
+  }, [mouseX, mouseY, isVisible, mounted, isTouchDevice]);
 
-  if (isTouchOnlyDevice()) {
+  if (!mounted || isTouchDevice) {
     return null;
   }
 
