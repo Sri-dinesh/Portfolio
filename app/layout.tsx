@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import '@/styles/globals.css';
 import { SignatureCursor } from '@/components/client/SignatureCursor';
 import ScrollToTopButton from '@/components/client/ScrollToTopButton';
 
