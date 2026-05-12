@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SignatureCursor } from "@/components/signature-cursor";
 import ScrollToTopButton from "@/components/scroll-to-top";
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sridinesh-portfolio.vercel.app"),
@@ -76,7 +82,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>
+      <body className={`${geistMono.variable} font-mono antialiased`}>
         <div className="min-h-screen bg-obsidian text-alabaster selection:bg-charcoal-light selection:text-white pb-24 relative">
           <div
             className="fixed inset-0 z-0 pointer-events-none"
