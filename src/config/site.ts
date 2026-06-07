@@ -29,4 +29,12 @@ export const KEYWORDS = [
   "TypeScript developer",
   "web developer Hyderabad",
   "software engineer portfolio",
+  "AI resume builder",
+  "AI drawing analyzer",
+  "AI developer portfolio",
+  "frontend developer portfolio inspiration",
+  "full-stack developer showcases",
+  "portfolio website for developers",
+  "next.js portfolio",
+  "creative developer portfolio",
 ];

@@ -61,12 +61,44 @@ export default function RootLayout({
     "@type": "Person",
     name: "S Sridinesh",
     url: "https://sridinesh-portfolio.vercel.app/",
+    image: "https://avatars.githubusercontent.com/u/101187384?v=4",
     sameAs: [
       "https://github.com/Sri-dinesh",
       "https://linkedin.com/in/sridinesh07",
       "https://x.com/srixdevv",
     ],
     jobTitle: "Full-Stack Developer",
+    hasOccupation: {
+      "@type": "Occupation",
+      name: "Full-Stack Developer",
+      occupationLocation: {
+        "@type": "City",
+        name: "Hyderabad",
+      },
+    },
+    worksFor: {
+      "@type": "Organization",
+      name: "Happenix",
+    },
+    alumniOf: [
+      {
+        "@type": "EducationalOrganization",
+        name: "Vardhaman College of Engineering",
+      },
+      {
+        "@type": "EducationalOrganization",
+        name: "T.R.R. College of Technology",
+      },
+    ],
+    knowsAbout: [
+      "Full-Stack Development",
+      "React",
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "AI Integration",
+      "UI/UX Design",
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Hyderabad",
@@ -75,13 +107,29 @@ export default function RootLayout({
     },
   };
 
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "S Sridinesh Portfolio",
+    url: "https://sridinesh-portfolio.vercel.app/",
+    description: "Personal portfolio of S Sridinesh, a Full-Stack Developer and UI/UX Designer.",
+    author: "S Sridinesh",
+  };
+
   return (
     <html lang="en">
       <head>
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly version" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(jsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
           }}
         />
       </head>

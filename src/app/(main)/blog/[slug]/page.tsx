@@ -40,9 +40,39 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: blog.title,
+    description: blog.description,
+    image: blog.imageUrl,
+    datePublished: new Date(blog.date).toISOString(),
+    author: {
+      "@type": "Person",
+      name: "S Sridinesh",
+      url: "https://sridinesh-portfolio.vercel.app/",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "S Sridinesh",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://sridinesh-portfolio.vercel.app/blog/${slug}`,
+    },
+  };
+
   return (
     <>
       <Navbar />
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(blogJsonLd),
+          }}
+        />
+      </head>
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32 relative z-10">
         <Link
           href="/blog"

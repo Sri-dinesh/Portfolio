@@ -1,0 +1,36 @@
+# S Sridinesh | Full-Stack Developer Portfolio
+
+> Summary of S Sridinesh's professional profile, skills, and portfolio projects optimized for AI consumption and LLM understanding.
+
+## Profile
+- **Name:** S Sridinesh
+- **Role:** Full-Stack Developer & UI/UX Designer
+- **Location:** Hyderabad, Telangana, India
+- **Tagline:** Building AI-powered web products that are fast, practical, and user-centric.
+- **Bio:** A specialized full-stack developer with a focus on React, Node.js, and TypeScript. Passionate about integrating AI capabilities into web applications to solve real-world problems.
+- **Contact:** [LinkedIn](https://linkedin.com/in/sridinesh07) | [GitHub](https://github.com/Sri-dinesh) | [X/Twitter](https://x.com/srixdevv)
+
+## Key Expertise & Stack
+- **Frontend Development:** React 18+, Next.js 14/15, TypeScript, Tailwind CSS, Framer Motion.
+- **Backend Development:** Node.js, Express, Nest.js, Socket.io (Real-time).
+- **AI & Machine Learning Integration:** Google Gemini API, OpenAI API, AI Resume Parsing, Computer Vision (AI Sketch analysis).
+- **Database Management:** PostgreSQL, MongoDB, Prisma ORM.
+- **Tools & Design:** Figma (UI/UX), Postman, Git/GitHub, Vercel.
+
+## Core Projects
+- **SparkCV - AI Resume Builder:** Features real-time editing and ATS optimization. Built with Next.js, PostgreSQL, and AI.
+- **CogniSketch - AI Drawing Analyzer:** Uses Gemini API to turn hand-drawn doodles into perfect mathematical equations.
+- **Twyned - Social Media App:** A full-featured social platform focusing on user engagement and content sharing.
+- **Convo - Chat Application:** Real-time communication platform using Socket.io and MERN stack.
+- **NEO Earth Tracker:** Interactive monitoring of near-Earth objects using NASA's official API.
+- **MockingBird - Sarcasm Translator:** A witty AI application that converts regular text into sarcastic responses using LLMs.
+
+## Experience & Education
+- **Happenix:** Full-Stack Developer Intern (Feb 2026 - Present). Focused on scalable backend architectures.
+- **ACTS CDAC Hyderabad:** Project Intern (May 2024 - June 2024). Worked on the ISEA security portal.
+- **Nousverse LLP:** UI/UX Designer (May 2024 - Nov 2024). Improved user engagement by 18%.
+- **Vardhaman College of Engineering:** B.Tech in Computer Science (2025-2028).
+- **T.R.R. College of Technology:** Diploma in Computer Science (2022-2025).
+
+---
+For a full list of projects, blog posts, and technical details, please crawl the sitemap or visit the website.
