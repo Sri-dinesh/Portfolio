@@ -111,14 +111,14 @@ export default async function BlogPostPage({ params }: PageProps) {
           <ReactMarkdown 
             remarkPlugins={[remarkGfm]}
             components={{
-              h1: ({ node, ...props }) => <h1 className="text-3xl font-bold mt-16 mb-8 text-white tracking-tight" {...props} />,
-              h2: ({ node, ...props }) => <h2 className="text-2xl font-bold mt-14 mb-6 text-white tracking-tight" {...props} />,
-              h3: ({ node, ...props }) => <h3 className="text-xl font-bold mt-10 mb-4 text-white tracking-tight" {...props} />,
-              p: ({ node, ...props }) => <p className="text-white/70 leading-[1.8] mb-8 text-lg whitespace-pre-wrap" {...props} />,
-              ul: ({ node, ...props }) => <ul className="list-disc list-outside mb-8 space-y-4 text-white/70 text-lg ml-6" {...props} />,
-              ol: ({ node, ...props }) => <ol className="list-decimal list-outside mb-8 space-y-4 text-white/70 text-lg ml-6" {...props} />,
-              li: ({ node, ...props }) => <li className="pl-2" {...props} />,
-              code({ node, inline, className, children, ...props }: any) {
+              h1: ({ node: _node, ...props }) => <h1 className="text-3xl font-bold mt-16 mb-8 text-white tracking-tight" {...props} />,
+              h2: ({ node: _node, ...props }) => <h2 className="text-2xl font-bold mt-14 mb-6 text-white tracking-tight" {...props} />,
+              h3: ({ node: _node, ...props }) => <h3 className="text-xl font-bold mt-10 mb-4 text-white tracking-tight" {...props} />,
+              p: ({ node: _node, ...props }) => <p className="text-white/70 leading-[1.8] mb-8 text-lg whitespace-pre-wrap" {...props} />,
+              ul: ({ node: _node, ...props }) => <ul className="list-disc list-outside mb-8 space-y-4 text-white/70 text-lg ml-6" {...props} />,
+              ol: ({ node: _node, ...props }) => <ol className="list-decimal list-outside mb-8 space-y-4 text-white/70 text-lg ml-6" {...props} />,
+              li: ({ node: _node, ...props }) => <li className="pl-2" {...props} />,
+              code({ node: _node, inline, className, children, ...props }: any) {
                 const match = /language-(\w+)/.exec(className || '');
                 return !inline && match ? (
                   <div className="my-10 rounded-2xl overflow-hidden border border-white/10 bg-[#0d0d0e]">
@@ -147,7 +147,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   </code>
                 );
               },
-              blockquote: ({ node, ...props }) => (
+              blockquote: ({ node: _node, ...props }) => (
                 <blockquote className="border-l-2 border-white/20 pl-8 my-12 italic text-white/50 text-xl leading-relaxed" {...props} />
               ),
               hr: () => <hr className="border-white/5 my-16" />,

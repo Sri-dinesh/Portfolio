@@ -5,6 +5,7 @@ import { HeroCard } from '@/components/hero-card';
 import { TimelineSection } from '@/components/timeline-section';
 import { ProjectList } from '@/components/project-list';
 import { FreelanceProjects } from '@/components/freelance-projects';
+import { GithubCalendarWrapper } from '@/components/github-calendar-wrapper';
 
 import { generateMetadata as generateSeoMetadata } from "@/config/seo";
 
@@ -71,6 +72,17 @@ function BentoGrid() {
           Freelance Projects
         </h2>
         <FreelanceProjects />
+      </section>
+
+      <section
+        id="github"
+        className="sm:col-span-2 lg:col-span-4 scroll-mt-24"
+        aria-labelledby="github-heading"
+      >
+        <h2 id="github-heading" className="sr-only">
+          GitHub Contributions
+        </h2>
+        <GithubCalendarWrapper username="Sri-dinesh" />
       </section>
 
       <section

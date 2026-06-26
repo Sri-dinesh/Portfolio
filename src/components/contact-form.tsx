@@ -50,7 +50,7 @@ export function ContactForm() {
         setStatus("error");
         setTimeout(() => setStatus("idle"), 5000);
       }
-    } catch (error) {
+    } catch {
       setStatus("error");
       setTimeout(() => setStatus("idle"), 5000);
     }
@@ -81,98 +81,98 @@ export function ContactForm() {
       </motion.h2>
 
       {mounted && (
-      <form
-        onSubmit={handleSubmit}
-        className="relative flex flex-col sm:flex-row border-y border-r border-white/10 overflow-hidden divide-y sm:divide-y-0 sm:divide-x divide-white/10"
-      >
-        <input
-          type="checkbox"
-          name="botcheck"
-          className="hidden"
-          style={{ display: "none" }}
-        />
-
-        <div className="flex-1 bg-transparent">
-          <input
-            type="text"
-            name="name"
-            placeholder="NAME"
-            required
-            value={formData.name}
-            onChange={handleInputChange}
-            className="w-full h-20 sm:h-24 bg-transparent px-6 text-sm font-medium text-white placeholder:text-white/20 focus:outline-none focus:bg-white/[0.02] transition-colors uppercase tracking-widest border-none outline-none rounded-none appearance-none ring-0 shadow-none"
-          />
-        </div>
-
-        <div className="flex-1 bg-transparent">
-          <input
-            type="email"
-            name="email"
-            placeholder="EMAIL"
-            required
-            value={formData.email}
-            onChange={handleInputChange}
-            className="w-full h-20 sm:h-24 bg-transparent px-6 text-sm font-medium text-white placeholder:text-white/20 focus:outline-none focus:bg-white/[0.02] transition-colors uppercase tracking-widest border-none outline-none rounded-none appearance-none ring-0 shadow-none"
-            suppressHydrationWarning
-          />
-        </div>
-
-        <div className="flex-[2] bg-transparent">
-          <input
-            type="text"
-            name="message"
-            placeholder="MESSAGE"
-            required
-            value={formData.message}
-            onChange={handleInputChange}
-            className="w-full h-20 sm:h-24 bg-transparent px-6 text-sm font-medium text-white placeholder:text-white/20 focus:outline-none focus:bg-white/[0.02] transition-colors uppercase tracking-widest border-none outline-none rounded-none appearance-none ring-0 shadow-none"
-          />
-        </div>
-
-        <button
-          type="submit"
-          disabled={status === "loading"}
-          className="w-full sm:w-auto sm:px-12 h-16 sm:h-24 bg-white text-black font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-emerald-500 transition-colors duration-500 disabled:opacity-50"
+        <form
+          onSubmit={handleSubmit}
+          className="relative flex flex-col sm:flex-row border-y border-r border-white/10 overflow-hidden divide-y sm:divide-y-0 sm:divide-x divide-white/10"
         >
-          {status === "loading" ? (
-            <Loader2 className="w-4 h-4 animate-spin" />
-          ) : (
-            <>
-              <span>SEND</span>
-              <ArrowRight className="w-4 h-4" />
-            </>
-          )}
-        </button>
+          <input
+            type="checkbox"
+            name="botcheck"
+            className="hidden"
+            style={{ display: "none" }}
+          />
 
-        <AnimatePresence>
-          {status === "success" && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="absolute inset-0 bg-emerald-500 flex items-center justify-center gap-3 z-20"
-            >
-              <CheckCircle className="w-5 h-5 text-black" />
-              <span className="text-black font-bold text-xs uppercase tracking-widest">
-                Transmission Successful
-              </span>
-            </motion.div>
-          )}
-          {status === "error" && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="absolute inset-0 bg-red-500 flex items-center justify-center gap-3 z-20"
-            >
-              <AlertCircle className="w-5 h-5 text-white" />
-              <span className="text-white font-bold text-xs uppercase tracking-widest">
-                Transmission Failed
-              </span>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </form>
+          <div className="flex-1 bg-transparent">
+            <input
+              type="text"
+              name="name"
+              placeholder="NAME"
+              required
+              value={formData.name}
+              onChange={handleInputChange}
+              className="w-full h-20 sm:h-24 bg-transparent px-6 text-sm font-medium text-white placeholder:text-white/20 focus:outline-none focus:bg-white/[0.02] transition-colors uppercase tracking-widest border-none outline-none rounded-none appearance-none ring-0 shadow-none"
+            />
+          </div>
+
+          <div className="flex-1 bg-transparent">
+            <input
+              type="email"
+              name="email"
+              placeholder="EMAIL"
+              required
+              value={formData.email}
+              onChange={handleInputChange}
+              className="w-full h-20 sm:h-24 bg-transparent px-6 text-sm font-medium text-white placeholder:text-white/20 focus:outline-none focus:bg-white/[0.02] transition-colors uppercase tracking-widest border-none outline-none rounded-none appearance-none ring-0 shadow-none"
+              suppressHydrationWarning
+            />
+          </div>
+
+          <div className="flex-[2] bg-transparent">
+            <input
+              type="text"
+              name="message"
+              placeholder="MESSAGE"
+              required
+              value={formData.message}
+              onChange={handleInputChange}
+              className="w-full h-20 sm:h-24 bg-transparent px-6 text-sm font-medium text-white placeholder:text-white/20 focus:outline-none focus:bg-white/[0.02] transition-colors uppercase tracking-widest border-none outline-none rounded-none appearance-none ring-0 shadow-none"
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={status === "loading"}
+            className="w-full sm:w-auto sm:px-12 h-16 sm:h-24 bg-white text-black font-bold text-xs uppercase tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-emerald-500 transition-colors duration-500 disabled:opacity-50"
+          >
+            {status === "loading" ? (
+              <Loader2 className="w-4 h-4 animate-spin" />
+            ) : (
+              <>
+                <span>SEND</span>
+                <ArrowRight className="w-4 h-4" />
+              </>
+            )}
+          </button>
+
+          <AnimatePresence>
+            {status === "success" && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="absolute inset-0 bg-emerald-500 flex items-center justify-center gap-3 z-20"
+              >
+                <CheckCircle className="w-5 h-5 text-black" />
+                <span className="text-black font-bold text-xs uppercase tracking-widest">
+                  Transmission Successful
+                </span>
+              </motion.div>
+            )}
+            {status === "error" && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="absolute inset-0 bg-red-500 flex items-center justify-center gap-3 z-20"
+              >
+                <AlertCircle className="w-5 h-5 text-white" />
+                <span className="text-white font-bold text-xs uppercase tracking-widest">
+                  Transmission Failed
+                </span>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </form>
       )}
 
       <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-8">
@@ -183,7 +183,7 @@ export function ContactForm() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[10px] font-bold text-white/40 hover:text-emerald-400 tracking-[0.2em] transition-colors"
+              className="text-xs sm:text-sm font-semibold text-white/40 hover:text-emerald-400 tracking-[0.15em] transition-colors"
             >
               {link.label}
             </a>
@@ -195,15 +195,15 @@ export function ContactForm() {
         <div className="flex flex-wrap gap-x-8 gap-y-4">
           <a
             href="mailto:santhisridinesh@gmail.com"
-            className="text-[10px] font-bold text-white/40 hover:text-white tracking-[0.2em] transition-colors"
+            className="text-xs sm:text-sm font-semibold text-white/40 hover:text-white tracking-[0.15em] transition-colors"
           >
             SANTHISRIDINESH@GMAIL.COM
           </a>
           <a
             href="tel:+919949887000"
-            className="text-[10px] font-bold text-white/40 hover:text-white tracking-[0.2em] transition-colors"
+            className="text-xs sm:text-sm font-semibold text-white/40 hover:text-white tracking-[0.15em] transition-colors"
           >
-            +91 99498 87000
+            +91 9949887000
           </a>
         </div>
       </div>
