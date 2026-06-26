@@ -4,6 +4,7 @@ import { Skills } from '@/components/skills';
 import { HeroCard } from '@/components/hero-card';
 import { TimelineSection } from '@/components/timeline-section';
 import { ProjectList } from '@/components/project-list';
+import { FreelanceProjects } from '@/components/freelance-projects';
 
 import { generateMetadata as generateSeoMetadata } from "@/config/seo";
 
@@ -59,6 +60,17 @@ function BentoGrid() {
           Experience & Education
         </h2>
         <TimelineSection />
+      </section>
+
+      <section
+        id="freelance"
+        className="sm:col-span-2 lg:col-span-4 scroll-mt-24"
+        aria-labelledby="freelance-heading"
+      >
+        <h2 id="freelance-heading" className="sr-only">
+          Freelance Projects
+        </h2>
+        <FreelanceProjects />
       </section>
 
       <section

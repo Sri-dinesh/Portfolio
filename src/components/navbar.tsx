@@ -8,6 +8,7 @@ import {
   User,
   Code,
   Briefcase,
+  Laptop,
   Mail,
   FileText,
   ScrollText,
@@ -26,6 +27,7 @@ const NAV_ITEMS: NavItem[] = [
   { id: "skills", label: "Skills", icon: Code },
   { id: "projects", label: "Projects", icon: Briefcase },
   { id: "experience", label: "Experience", icon: FileText },
+  { id: "freelance", label: "Freelance", icon: Laptop },
   { id: "contact", label: "Contact", icon: Mail },
   { id: "blog", label: "Blogs", icon: ScrollText, href: "/blog" },
 ];
