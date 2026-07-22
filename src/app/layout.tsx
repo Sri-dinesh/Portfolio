@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SignatureCursor } from "@/components/signature-cursor";
+import GoogleAnalytics from "@/components/google-analytics";
 import ScrollToTopButton from "@/components/scroll-to-top";
 
 const geistMono = Geist_Mono({
@@ -112,14 +113,20 @@ export default function RootLayout({
     "@type": "WebSite",
     name: "S Sridinesh Portfolio",
     url: "https://sridinesh-portfolio.vercel.app/",
-    description: "Personal portfolio of S Sridinesh, a Full-Stack Developer and UI/UX Designer.",
+    description:
+      "Personal portfolio of S Sridinesh, a Full-Stack Developer and UI/UX Designer.",
     author: "S Sridinesh",
   };
 
   return (
     <html lang="en">
       <head>
-        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly version" />
+        <link
+          rel="alternate"
+          type="text/plain"
+          href="/llms.txt"
+          title="LLM-friendly version"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -137,11 +144,11 @@ export default function RootLayout({
         <div className="min-h-screen bg-obsidian text-alabaster selection:bg-charcoal-light selection:text-white pb-24 relative">
           <div
             className="fixed inset-0 z-0 pointer-events-none"
-            aria-hidden="true"
-          >
+            aria-hidden="true">
             <div className="absolute inset-0 bg-[radial-gradient(#a1a1a6_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.03]" />
             <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80" />
           </div>
+          <GoogleAnalytics />
           <SignatureCursor />
           {children}
           <ScrollToTopButton />
