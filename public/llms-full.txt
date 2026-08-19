@@ -39,12 +39,19 @@ S Sridinesh is a results-driven Full-Stack Developer based in Hyderabad, India. 
 - **Tech:** React, Python, Gemini API, Tailwind CSS.
 - **URL:** https://ai-smartsketch.onrender.com/
 
-### 3. Twyned (Social Media Platform)
-- **Tech:** NextJS, React, PostgreSQL, Tailwind CSS.
-- **Focus:** Scalable architecture and user interaction.
-- **URL:** https://twyned.vercel.app/
+### 3. RecruitAI (Candidate Intelligence Platform)
+- **Problem:** Biased and inefficient resume screening and lack of deterministic candidate scoring.
+- **Solution:** A multi-agent candidate intelligence platform enforcing blind evaluations and structured ATS exports.
+- **Tech:** Next.js, FastAPI, Python, LangGraph, Supabase.
+- **URL:** https://recruitaiofficial.vercel.app/
 
-### 4. MockingBird (Sarcasm Translator)
+### 4. FlowSync (AI Traffic Network Simulation)
+- **Problem:** Urban traffic congestion and inefficient static traffic light timing.
+- **Solution:** Real-time 3D simulation dynamically optimizing traffic signals using Dueling Double DQN (D3QN) and Prioritized Experience Replay.
+- **Tech:** Next.js, React Three Fiber, PyTorch, FastAPI, Supabase.
+- **URL:** https://flowsyncc.vercel.app/
+
+### 5. MockingBird (Sarcasm Translator)
 - **Tech:** React Native, Bun, Gemini API.
 - **Innovation:** Creative use of LLMs for persona-based text transformation.
 

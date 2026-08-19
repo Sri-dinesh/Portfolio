@@ -27,22 +27,21 @@ export const projects: Project[] = [
     imageUrl: "/images/projects/calculator.webp",
   },
   {
-    title: "Twyned - Social Media App",
+    title: "RecruitAI - Candidate Intelligence Platform",
     description:
-      "A social media platform that allows users to connect, share content, and engage with each other.",
-    language: "NextJS, React, PostgreSQL, Tailwind CSS",
-    demoLink: "https://twyned.vercel.app/",
-    codeLink: "https://github.com/Sri-dinesh/Twyned-nextjs",
-    imageUrl: "/images/projects/twynedNextjs.webp",
+      "A multi-agent candidate intelligence platform that automates technical evaluations, blind screening, and deterministic ATS-ready workflows.",
+    language: "Next.js, FastAPI, Python, LangGraph, Supabase",
+    demoLink: "https://recruitaiofficial.vercel.app/",
+    codeLink: "https://github.com/Sri-dinesh/RecruitAI",
+    imageUrl: "/images/projects/recruitai.png",
   },
   {
-    title: "Convo - Chat Application",
+    title: "FlowSync - AI Traffic Network Simulation",
     description:
-      "A real-time chat application that allows users to communicate seamlessly with friends and family.",
-    language: "React, Express.js, Node.js, Socket.io, MongoDB",
-    demoLink: "https://convo-chat-app-m853.onrender.com/",
-    codeLink: "https://github.com/Sri-dinesh/Convo-Chat-App",
-    imageUrl: "/images/projects/application-demo.webp",
+      "Real-time 3D traffic simulation and optimization platform powered by Dueling Double Deep Q-Networks (D3QN) and Prioritized Experience Replay.",
+    language: "Next.js, Three.js, PyTorch, FastAPI, Supabase",
+    demoLink: "https://flowsyncc.vercel.app/",
+    codeLink: "https://github.com/Sri-dinesh/FlowSync",
   },
   {
     title: "NEO Earth Tracker - Near Earth Objects",

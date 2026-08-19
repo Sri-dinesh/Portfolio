@@ -20,8 +20,8 @@
 ## Core Projects
 - **SparkCV - AI Resume Builder:** Features real-time editing and ATS optimization. Built with Next.js, PostgreSQL, and AI.
 - **CogniSketch - AI Drawing Analyzer:** Uses Gemini API to turn hand-drawn doodles into perfect mathematical equations.
-- **Twyned - Social Media App:** A full-featured social platform focusing on user engagement and content sharing.
-- **Convo - Chat Application:** Real-time communication platform using Socket.io and MERN stack.
+- **RecruitAI - Candidate Intelligence Platform:** Multi-agent candidate intelligence automating blind technical evaluations and ATS workflows. Built with Next.js, FastAPI, LangGraph, and Supabase.
+- **FlowSync - AI Traffic Network Simulation:** Real-time 3D traffic simulation and optimization platform using Dueling Double DQN (D3QN) and PyTorch.
 - **NEO Earth Tracker:** Interactive monitoring of near-Earth objects using NASA's official API.
 - **MockingBird - Sarcasm Translator:** A witty AI application that converts regular text into sarcastic responses using LLMs.
 
